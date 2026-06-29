@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elias Ahmed · 后端开发 · 全栈工程师</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap');
+        * { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        .lang-toggle { cursor: pointer; transition: 0.2s; }
+        .lang-toggle:hover { opacity: 0.7; }
+        .section-zh, .section-en { display: none; }
+        .section-zh.active, .section-en.active { display: block; }
+        .badge { background: #eef2ff; color: #4338ca; padding: 4px 12px; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; }
+        .project-card { border-left: 4px solid #4338ca; }
+        .skill-tag { background: #f3f4f6; padding: 4px 12px; border-radius: 9999px; font-size: 0.75rem; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- ===== NAV ===== -->
+    <nav class="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
+        <span class="font-bold text-lg text-indigo-700">Elias Ahmed</span>
+        <div class="flex gap-3 text-sm">
+            <button onclick="switchLang('zh')" class="lang-toggle font-medium text-indigo-600" id="btn-zh">中文</button>
+            <span class="text-gray-300">|</span>
+            <button onclick="switchLang('en')" class="lang-toggle font-medium text-gray-400" id="btn-en">English</button>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <header class="max-w-4xl mx-auto px-4 py-8 text-center">
+        <!-- 中文 -->
+        <div class="section-zh active" id="hero-zh">
+            <h1 class="text-4xl font-bold text-indigo-800">👋 你好，我是 Elias</h1>
+            <p class="text-xl text-gray-600 mt-2">后端开发 · 自动化工程 · 全栈工程师</p>
+            <p class="text-sm text-gray-500 mt-1">📍 中国 · 可立即到岗实习 · 2026 届毕业生</p>
+            <div class="flex flex-wrap justify-center gap-3 mt-4 text-sm">
+                <a href="mailto:ahmedelias@qq.com" class="text-indigo-600"><i class="fas fa-envelope"></i> ahmedelias@qq.com</a>
+                <a href="tel:+8615630406032" class="text-indigo-600"><i class="fas fa-phone"></i> +86 156 3040 6032</a>
+                <a href="https://github.com/elias702" target="_blank" class="text-indigo-600"><i class="fab fa-github"></i> github.com/elias702</a>
+                <a href="https://linkedin.com/in/elias-ahmed-946875251" target="_blank" class="text-indigo-600"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+        </div>
+        <!-- 英文 -->
+        <div class="section-en" id="hero-en">
+            <h1 class="text-4xl font-bold text-indigo-800">👋 Hi, I'm Elias</h1>
+            <p class="text-xl text-gray-600 mt-2">Backend · Automation · Full-Stack</p>
+            <p class="text-sm text-gray-500 mt-1">📍 China · Available for internship · Class of 2026</p>
+            <div class="flex flex-wrap justify-center gap-3 mt-4 text-sm">
+                <a href="mailto:ahmedelias@qq.com" class="text-indigo-600"><i class="fas fa-envelope"></i> ahmedelias@qq.com</a>
+                <a href="tel:+8615630406032" class="text-indigo-600"><i class="fas fa-phone"></i> +86 156 3040 6032</a>
+                <a href="https://github.com/elias702" target="_blank" class="text-indigo-600"><i class="fab fa-github"></i> github.com/elias702</a>
+                <a href="https://linkedin.com/in/elias-ahmed-946875251" target="_blank" class="text-indigo-600"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== SUMMARY ===== -->
+    <section class="max-w-4xl mx-auto px-4 py-6">
+        <div class="section-zh active">
+            <h2 class="text-2xl font-bold text-indigo-700">📌 个人概述</h2>
+            <p class="mt-2 text-gray-700 leading-relaxed">
+                具备扎实后端开发与自动化工程能力的应届毕业生，熟悉高可用 REST API 设计、异步数据处理管道及关系型数据库建模。
+                技术栈覆盖全栈：后端 FastAPI + PostgreSQL，前端 Next.js + Tailwind CSS，熟练运用 Docker 与 CI/CD 实现标准化部署。
+                拥有独立从零构建完整项目的经验，具备优秀的自我驱动力与技术学习能力。
+                目前在华就读本科最后一年，可立即到岗实习，愿意配合公司完成签证转签流程，期望加入有技术深度的研发团队。
+            </p>
+        </div>
+        <div class="section-en">
+            <h2 class="text-2xl font-bold text-indigo-700">📌 Summary</h2>
+            <p class="mt-2 text-gray-700 leading-relaxed">
+                Final-year student in China with hands-on experience building production-grade backends, async data pipelines,
+                and full-stack applications. Proficient in FastAPI, PostgreSQL, Docker, and modern frontend frameworks.
+                Demonstrated ability to ship independently and learn new technologies rapidly.
+                Available for immediate internship and committed to a long-term career in China. Seeking a technically challenging
+                environment where I can contribute and grow.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== TECH STACK ===== -->
+    <section class="max-w-4xl mx-auto px-4 py-6">
+        <div class="section-zh active">
+            <h2 class="text-2xl font-bold text-indigo-700">🛠 技术栈</h2>
+            <div class="flex flex-wrap gap-2 mt-3">
+                <span class="badge">Python</span><span class="badge">C</span><span class="badge">JavaScript</span>
+                <span class="badge">SQL</span><span class="badge">FastAPI</span><span class="badge">Flask</span>
+                <span class="badge">PostgreSQL</span><span class="badge">SQLAlchemy</span><span class="badge">JWT</span>
+                <span class="badge">OAuth2</span><span class="badge">Playwright</span><span class="badge">Scrapy</span>
+                <span class="badge">Asyncio</span><span class="badge">Docker</span><span class="badge">CI/CD</span>
+                <span class="badge">Next.js</span><span class="badge">Tailwind CSS</span>
+            </div>
+        </div>
+        <div class="section-en">
+            <h2 class="text-2xl font-bold text-indigo-700">🛠 Tech Stack</h2>
+            <div class="flex flex-wrap gap-2 mt-3">
+                <span class="badge">Python</span><span class="badge">C</span><span class="badge">JavaScript</span>
+                <span class="badge">SQL</span><span class="badge">FastAPI</span><span class="badge">Flask</span>
+                <span class="badge">PostgreSQL</span><span class="badge">SQLAlchemy</span><span class="badge">JWT</span>
+                <span class="badge">OAuth2</span><span class="badge">Playwright</span><span class="badge">Scrapy</span>
+                <span class="badge">Asyncio</span><span class="badge">Docker</span><span class="badge">CI/CD</span>
+                <span class="badge">Next.js</span><span class="badge">Tailwind CSS</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section class="max-w-4xl mx-auto px-4 py-6">
+        <div class="section-zh active">
+            <h2 class="text-2xl font-bold text-indigo-700">📁 项目经验</h2>
+
+            <div class="project-card bg-white p-5 rounded-xl shadow-sm mt-4 pl-6">
+                <h3 class="font-bold text-lg">Pollen · 全栈 API 平台</h3>
+                <p class="text-sm text-gray-500">2026.06 – 至今 | FastAPI · Next.js · Docker · JWT + OAuth2</p>
+                <ul class="list-disc list-inside text-gray-700 text-sm mt-2 space-y-1">
+                    <li>从零设计生产级 FastAPI 后端，模块化路由 + 依赖注入 + 全异步请求生命周期</li>
+                    <li>实现 JWT + OAuth2 双重认证体系，细粒度权限控制与令牌刷新机制</li>
+                    <li>Next.js 前端 + AI 辅助原型设计，开发周期压缩 40%</li>
+                    <li>Git 规范管理 + CI/CD 自动化部署</li>
+                </ul>
+            </div>
+
+            <div class="project-card bg-white p-5 rounded-xl shadow-sm mt-4 pl-6">
+                <h3 class="font-bold text-lg">MobiOrbit · 数据采集管道</h3>
+                <p class="text-sm text-gray-500">2026.04 – 至今 | PostgreSQL · Playwright · Scrapy · Asyncio · Docker</p>
+                <ul class="list-disc list-inside text-gray-700 text-sm mt-2 space-y-1">
+                    <li>设计多表 PostgreSQL 关系模型，外键约束 + 复合索引优化</li>
+                    <li>异步非阻塞采集管道：Playwright + Scrapy + Asyncio 并发编排</li>
+                    <li>技术 SEO 策略落地，提升自然搜索曝光，降低跳出率</li>
+                    <li>多阶段 Docker 构建 + CI/CD 环境一致性保障</li>
+                </ul>
+            </div>
+
+            <div class="project-card bg-white p-5 rounded-xl shadow-sm mt-4 pl-6">
+                <h3 class="font-bold text-lg">ecomedoc.co.uk · Shopify 电商平台</h3>
+                <p class="text-sm text-gray-500">2025.08 – 12 | Shopify · Liquid · Python · SEO</p>
+                <ul class="list-disc list-inside text-gray-700 text-sm mt-2 space-y-1">
+                    <li>独立完成 Shopify 店铺开发与上线，定制 Liquid 模板提升性能</li>
+                    <li>Python 脚本实现供应商分析、库存同步与动态定价</li>
+                    <li>Core Web Vitals 优化 + 结构化数据，强化 SEO 排名</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 英文版 Projects -->
+        <div class="section-en">
+            <h2 class="text-2xl font-bold text-indigo-700">📁 Projects</h2>
+
+            <div class="project-card bg-white p-5 rounded-xl shadow-sm mt-4 pl-6">
+                <h3 class="font-bold text-lg">Pollen · Full-Stack API Platform</h3>
+                <p class="text-sm text-gray-500">Jun 2026 – Present | FastAPI · Next.js · Docker · JWT + OAuth2</p>
+                <ul class="list-disc list-inside text-gray-700 text-sm mt-2 space-y-1">
+                    <li>Production-grade FastAPI backend with modular routes, DI, and async request lifecycle</li>
+                    <li>JWT + OAuth2 dual-layer auth with scoped access & token refresh</li>
+                    <li>Next.js frontend with AI-assisted prototyping — 40% faster dev cycles</li>
+                    <li>Git feature branching + CI/CD automation</li>
+                </ul>
+            </div>
+
+            <div class="project-card bg-white p-5 rounded-xl shadow-sm mt-4 pl-6">
+                <h3 class="font-bold text-lg">MobiOrbit · Data Pipeline</h3>
+                <p class="text-sm text-gray-500">Apr 2026 – Present | PostgreSQL · Playwright · Scrapy · Asyncio · Docker</p>
+                <ul class="list-disc list-inside text-gray-700 text-sm mt-2 space-y-1">
+                    <li>Multi-table PostgreSQL schema with foreign keys, composite indexes</li>
+                    <li>Async pipeline: Playwright + Scrapy + Asyncio concurrency</li>
+                    <li>Technical SEO strategy — improved organic discovery & bounce rate</li>
+                    <li>Multi-stage Docker + CI/CD for environment parity</li>
+                </ul>
+            </div>
+
+            <div class="project-card bg-white p-5 rounded-xl shadow-sm mt-4 pl-6">
+                <h3 class="font-bold text-lg">ecomedoc.co.uk · Shopify Store</h3>
+                <p class="text-sm text-gray-500">Aug – Dec 2025 | Shopify · Liquid · Python · SEO</p>
+                <ul class="list-disc list-inside text-gray-700 text-sm mt-2 space-y-1">
+                    <li>End-to-end Shopify store development with custom Liquid templates</li>
+                    <li>Python scripts for vendor analysis, inventory sync, dynamic pricing</li>
+                    <li>Core Web Vitals & structured data — measurable SEO gains</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== DIFFERENTIATORS ===== -->
+    <section class="max-w-4xl mx-auto px-4 py-6">
+        <div class="section-zh active">
+            <h2 class="text-2xl font-bold text-indigo-700">⭐ 核心竞争力</h2>
+            <div class="flex flex-wrap gap-2 mt-3">
+                <span class="skill-tag">⚡ 异步数据管道</span>
+                <span class="skill-tag">🔐 JWT + OAuth2 认证系统</span>
+                <span class="skill-tag">🤖 AI 辅助前端开发</span>
+                <span class="skill-tag">🚀 极强技术学习能力</span>
+                <span class="skill-tag">📦 独立完整项目交付</span>
+                <span class="skill-tag">🌏 中英双语技术沟通</span>
+            </div>
+        </div>
+        <div class="section-en">
+            <h2 class="text-2xl font-bold text-indigo-700">⭐ Differentiators</h2>
+            <div class="flex flex-wrap gap-2 mt-3">
+                <span class="skill-tag">⚡ Async pipelines</span>
+                <span class="skill-tag">🔐 JWT + OAuth2 auth</span>
+                <span class="skill-tag">🤖 AI-accelerated frontend</span>
+                <span class="skill-tag">🚀 High learning velocity</span>
+                <span class="skill-tag">📦 Ships independently</span>
+                <span class="skill-tag">🌏 Bilingual (EN/ZH)</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="max-w-4xl mx-auto px-4 py-8 text-center text-sm text-gray-400 border-t mt-6">
+        <div class="section-zh active">📄 开放实习 / 全职机会 · 可立即到岗 · 欢迎联系</div>
+        <div class="section-en">📄 Open to internship / full-time · Available immediately · Let's connect</div>
+    </footer>
+
+    <!-- ===== LANGUAGE TOGGLE SCRIPT ===== -->
+    <script>
+        function switchLang(lang) {
+            // Hide all sections
+            document.querySelectorAll('.section-zh, .section-en').forEach(el => el.classList.remove('active'));
+            // Show selected language
+            document.querySelectorAll('.section-' + lang).forEach(el => el.classList.add('active'));
+            // Toggle button styles
+            document.getElementById('btn-zh').className = 'lang-toggle font-medium ' + (lang === 'zh' ? 'text-indigo-600' : 'text-gray-400');
+            document.getElementById('btn-en').className = 'lang-toggle font-medium ' + (lang === 'en' ? 'text-indigo-600' : 'text-gray-400');
+        }
+    </script>
+
+</body>
+</html>
