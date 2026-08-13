@@ -1,163 +1,397 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Elias Ahmed | Python Backend Developer & Automation Expert</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/framer-motion@6.3.11/dist/framer-motion.min.js" rel="preload" as="script">
-    <style>
-        * { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
-        .lang-toggle { cursor: pointer; transition: 0.2s; }
-        .lang-toggle:hover { opacity: 0.7; }
-        .section-zh, .section-en, .section-bn { display: none; }
-        .section-zh.active, .section-en.active, .section-bn.active { display: block; }
-        .badge { background: #eef2ff; color: #4338ca; padding: 4px 12px; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; }
-    </style>
-</head>
-<body class="bg-gray-50 text-gray-800">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <meta name="description" content="Elias Ahmed — Python backend developer building APIs, automation systems, data pipelines, and SEO-focused web products." />
+  <meta name="author" content="Elias Ahmed" />
 
-    <!-- ===== NAV ===== -->
-    <nav class="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center sticky top-0 bg-white z-10">
-        <span class="font-bold text-lg text-indigo-700">Elias Ahmed</span>
-        <div class="flex gap-3 text-sm">
-            <button onclick="switchLang('zh')" class="lang-toggle font-medium text-indigo-600" id="btn-zh">中文</button>
-            <span class="text-gray-300">|</span>
-            <button onclick="switchLang('en')" class="lang-toggle font-medium text-gray-400" id="btn-en">English</button>
-            <span class="text-gray-300">|</span>
-            <button onclick="switchLang('bn')" class="lang-toggle font-medium text-gray-400" id="btn-bn">বাংলা</button>
-        </div>
-    </nav>
+  <meta property="og:title" content="Elias Ahmed — Python Backend Developer" />
+  <meta property="og:description" content="Backend engineering, automation, data pipelines, web scraping, and full-stack product development." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://elias702.github.io/" />
 
-    <!-- ===== HERO ===== -->
-    <header class="max-w-4xl mx-auto px-4 py-8 text-center">
-        <!-- 中文 -->
-        <div class="section-zh active" id="hero-zh">
-            <h1 class="text-4xl font-bold text-indigo-800">👋 你好，我是 Elias</h1>
-            <p class="text-xl text-gray-600 mt-2">Python 后端开发 · Web 抓取专家 · Shopify 设计 & SEO/GEO 优化专家</p>
-            <div class="flex flex-wrap justify-center gap-3 mt-4 text-sm">
-                <a href="mailto:ahmedelias@qq.com" class="text-indigo-600"><i class="fas fa-envelope"></i> ahmedelias@qq.com</a>
-                <a href="tel:+8615630406032" class="text-indigo-600"><i class="fas fa-phone"></i> +86 156 3040 6032</a>
-                <a href="https://github.com/elias702" target="_blank" class="text-indigo-600"><i class="fab fa-github"></i> github.com/elias702</a>
-                <a href="https://linkedin.com/in/elias-ahmed-946875251" target="_blank" class="text-indigo-600"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            </div>
-        </div>
-        <!-- 英文 -->
-        <div class="section-en active" id="hero-en">
-            <h1 class="text-4xl font-bold text-indigo-800">👋 Hi, I'm Elias</h1>
-            <p class="text-xl text-gray-600 mt-2">Professional Python Backend Developer & Automation Expert</p>
-            <div class="flex flex-wrap justify-center gap-3 mt-4 text-sm">
-                <a href="mailto:ahmedelias@qq.com" class="text-indigo-600"><i class="fas fa-envelope"></i> ahmedelias@qq.com</a>
-                <a href="tel:+8615630406032" class="text-indigo-600"><i class="fas fa-phone"></i> +86 156 3040 6032</a>
-                <a href="https://github.com/elias702" target="_blank" class="text-indigo-600"><i class="fab fa-github"></i> github.com/elias702</a>
-                <a href="https://linkedin.com/in/elias-ahmed-946875251" target="_blank" class="text-indigo-600"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            </div>
-        </div>
-        <!-- বাংলা -->
-        <div class="section-bn active" id="hero-bn">
-            <h1 class="text-4xl font-bold text-indigo-800">👋 আমি Elias</h1>
-            <p class="text-xl text-gray-600 mt-2">Python ব্যবসায়ী পিডি, Web স্ক্র্যাপিং অংশিশক্তি, Shopify ডিজাইন & SEO/GEO ১৫২৮ সমর্থনীয় আকর্ষণ</p>
-            <div class="flex flex-wrap justify-center gap-3 mt-4 text-sm">
-                <a href="mailto:ahmedelias@qq.com" class="text-indigo-600"><i class="fas fa-envelope"></i> ahmedelias@qq.com</a>
-                <a href="tel:+8615630406032" class="text-indigo-600"><i class="fas fa-phone"></i> +86 156 3040 6032</a>
-                <a href="https://github.com/elias702" target="_blank" class="text-indigo-600"><i class="fab fa-github"></i> github.com/elias702</a>
-                <a href="https://linkedin.com/in/elias-ahmed-946875251" target="_blank" class="text-indigo-600"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            </div>
-        </div>
-    </header>
+  <title>Elias Ahmed — Python Backend Developer & Automation Engineer</title>
 
-    <!-- ===== SUMMARY ===== -->
-    <section class="max-w-4xl mx-auto px-4 py-6">
-        <div class="section-zh active">
-            <h2 class="text-2xl font-bold text-indigo-700">📌 个人概述</h2>
-            <p class="mt-2 text-gray-700 leading-relaxed">
-                擅长 Python 后端开发与自动化工程，精通高可用 REST API 设计、异步数据处理管道及关系型数据库建模。
-                技术栈覆盖全栈：Python (FastAPI, Django), Scrapy, Playwright, Selenium, Next.js, React, Tailwind CSS。
-            </p>
-        </div>
-        <div class="section-en active">
-            <h2 class="text-2xl font-bold text-indigo-700">📌 Summary</h2>
-            <p class="mt-2 text-gray-700 leading-relaxed">
-                Experienced Python backend developer with a focus on automation and web scraping.
-                Proficient in REST API design, asynchronous data processing, and relational database modeling.
-                Skilled in full-stack development: Python (FastAPI, Django), Scrapy, Playwright, Selenium, Next.js, React, Tailwind CSS.
-            </p>
-        </div>
-    </section>
-
-    <!-- ===== TECH STACK ===== -->
-    <section class="max-w-4xl mx-auto px-4 py-6">
-        <div class="section-zh active">
-            <h2 class="text-2xl font-bold text-indigo-700">🛠 技术栈</h2>
-            <div class="flex flex-wrap gap-2 mt-3">
-                <span class="badge">Python</span><span class="badge">FastAPI</span><span class="badge">Django</span>
-                <span class="badge">Scrapy</span><span class="badge">Playwright</span><span class="badge">Selenium</span>
-                <span class="badge">Next.js</span><span class="badge">React</span><span class="badge">Tailwind CSS</span>
-            </div>
-        </div>
-        <div class="section-en active">
-            <h2 class="text-2xl font-bold text-indigo-700">🛠 Tech Stack</h2>
-            <div class="flex flex-wrap gap-2 mt-3">
-                <span class="badge">Python</span><span class="badge">FastAPI</span><span class="badge">Django</span>
-                <span class="badge">Scrapy</span><span class="badge">Playwright</span><span class="badge">Selenium</span>
-                <span class="badge">Next.js</span><span class="badge">React</span><span class="badge">Tailwind CSS</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== PROJECTS ===== -->
-    <section class="max-w-4xl mx-auto px-4 py-6">
-        <div class="section-zh active">
-            <h2 class="text-2xl font-bold text-indigo-700">📁 项目经验</h2>
-            <!-- Add your project details here -->
-        </div>
-        <div class="section-en active">
-            <h2 class="text-2xl font-bold text-indigo-700">📁 Projects</h2>
-            <!-- Add your project details here -->
-        </div>
-    </section>
-
-    <!-- ===== DIFFERENTIATORS ===== -->
-    <section class="max-w-4xl mx-auto px-4 py-6">
-        <div class="section-zh active">
-            <h2 class="text-2xl font-bold text-indigo-700">⭐ 核心竞争力</h2>
-            <div class="flex flex-wrap gap-2 mt-3">
-                <span class="skill-tag">🚀 异步数据管道</span>
-                <span class="skill-tag">🔒 JWT + OAuth2 认证系统</span>
-                <span class="skill-tag">🤖 AI 辅助前端开发</span>
-                <span class="skill-tag">🌐 中英双语技术沟通</span>
-            </div>
-        </div>
-        <div class="section-en active">
-            <h2 class="text-2xl font-bold text-indigo-700">⭐ Differentiators</h2>
-            <div class="flex flex-wrap gap-2 mt-3">
-                <span class="skill-tag">🚀 Async pipelines</span>
-                <span class="skill-tag">🔒 JWT + OAuth2 auth</span>
-                <span class="skill-tag">🤖 AI-accelerated frontend</span>
-                <span class="skill-tag">🌐 Bilingual (EN/ZH)</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== FOOTER ===== -->
-    <footer class="max-w-4xl mx-auto px-4 py-8 text-center text-sm text-gray-400 border-t mt-6">
-        <div class="section-zh active">📄 开放实习 / 全职机会 · 可立即到岗 · 欢迎联系</div>
-        <div class="section-en">📄 Open to internship / full-time · Available immediately · Let's connect</div>
-    </footer>
-
-    <!-- ===== LANGUAGE TOGGLE SCRIPT ===== -->
-    <script>
-        function switchLang(lang) {
-            // Hide all sections
-            document.querySelectorAll('.section-zh, .section-en, .section-bn').forEach(el => el.classList.remove('active'));
-            // Show selected language
-            document.querySelectorAll('.section-' + lang).forEach(el => el.classList.add('active'));
-            // Toggle button styles
-            document.getElementById('btn-zh').className = 'lang-toggle font-medium ' + (lang === 'zh' ? 'text-indigo-600' : 'text-gray-400');
-            document.getElementById('btn-en').className = 'lang-toggle font-medium ' + (lang === 'en' ? 'text-indigo-600' : 'text-gray-400');
-            document.getElementById('btn-bn').className = 'lang-toggle font-medium ' + (lang === 'bn' ? 'text-indigo-600' : 'text-gray-400');
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'monospace']
+          }
         }
-    </script>
+      }
+    }
+  </script>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #080808;
+      --panel: #101010;
+      --line: rgba(255,255,255,.09);
+      --muted: #a1a1aa;
+      --text: #f5f5f5;
+      --accent: #a3e635;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      background:
+        radial-gradient(circle at 80% 0%, rgba(163,230,53,.08), transparent 30rem),
+        radial-gradient(circle at 10% 20%, rgba(59,130,246,.06), transparent 26rem),
+        var(--bg);
+      color: var(--text);
+    }
+
+    ::selection { background: rgba(163,230,53,.25); color: #fff; }
+
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: linear-gradient(to bottom, black, transparent 85%);
+    }
+
+    .glass {
+      background: rgba(16,16,16,.72);
+      border: 1px solid var(--line);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .card {
+      background: linear-gradient(145deg, rgba(255,255,255,.045), rgba(255,255,255,.018));
+      border: 1px solid var(--line);
+      transition: transform .25s ease, border-color .25s ease, background .25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(163,230,53,.28);
+      background: linear-gradient(145deg, rgba(255,255,255,.065), rgba(255,255,255,.022));
+    }
+
+    .accent { color: var(--accent); }
+    .mono { font-family: 'JetBrains Mono', monospace; }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      animation: reveal .7s ease forwards;
+    }
+
+    .delay-1 { animation-delay: .08s; }
+    .delay-2 { animation-delay: .16s; }
+    .delay-3 { animation-delay: .24s; }
+
+    @keyframes reveal {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Elias Ahmed",
+    "url": "https://elias702.github.io/",
+    "jobTitle": "Python Backend Developer",
+    "sameAs": [
+      "https://github.com/elias702",
+      "https://linkedin.com/in/elias-ahmed-946875251"
+    ],
+    "knowsAbout": [
+      "Python",
+      "FastAPI",
+      "Django",
+      "Web Scraping",
+      "Playwright",
+      "Automation",
+      "REST APIs",
+      "PostgreSQL",
+      "Redis",
+      "SEO",
+      "GEO",
+      "Next.js",
+      "React"
+    ]
+  }
+  </script>
+</head>
+
+<body class="min-h-screen font-sans antialiased">
+  <div class="fixed inset-0 pointer-events-none grid-bg"></div>
+
+  <nav class="sticky top-0 z-50">
+    <div class="glass mx-auto mt-3 flex max-w-6xl items-center justify-between rounded-2xl px-4 py-3 sm:px-5">
+      <a href="#" class="font-semibold tracking-tight">Elias<span class="accent">.</span></a>
+
+      <div class="hidden items-center gap-6 text-sm text-zinc-400 md:flex">
+        <a class="transition hover:text-white" href="#work">Work</a>
+        <a class="transition hover:text-white" href="#stack">Stack</a>
+        <a class="transition hover:text-white" href="#about">About</a>
+        <a class="transition hover:text-white" href="#contact">Contact</a>
+      </div>
+
+      <a href="mailto:ahmedelias@qq.com"
+         class="rounded-xl border border-lime-400/30 bg-lime-400/10 px-3 py-2 text-xs font-semibold text-lime-300 transition hover:bg-lime-400/15">
+        Let's talk →
+      </a>
+    </div>
+  </nav>
+
+  <main class="relative mx-auto max-w-6xl px-4 pb-16 sm:px-6">
+    <!-- HERO -->
+    <section class="grid min-h-[78vh] items-center gap-10 py-16 md:grid-cols-[1.35fr_.65fr] md:py-24">
+      <div>
+        <div class="reveal inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[.03] px-3 py-1.5 text-xs text-zinc-300">
+          <span class="h-2 w-2 animate-pulse rounded-full bg-lime-400"></span>
+          Available for freelance & internship opportunities
+        </div>
+
+        <h1 class="reveal delay-1 mt-6 max-w-4xl text-5xl font-extrabold leading-[1.02] tracking-[-.04em] sm:text-6xl lg:text-8xl">
+          I build the <span class="accent">backend</span><br />
+          behind useful products.
+        </h1>
+
+        <p class="reveal delay-2 mt-6 max-w-2xl text-base leading-7 text-zinc-400 sm:text-lg">
+          Python backend developer focused on APIs, automation, data pipelines,
+          web scraping, and practical full-stack products.
+        </p>
+
+        <div class="reveal delay-3 mt-8 flex flex-wrap gap-3">
+          <a href="#work" class="rounded-xl bg-white px-5 py-3 text-sm font-semibold text-black transition hover:bg-zinc-200">
+            View selected work
+          </a>
+          <a href="https://github.com/elias702" target="_blank" rel="noreferrer"
+             class="rounded-xl border border-white/10 bg-white/[.03] px-5 py-3 text-sm font-semibold text-white transition hover:border-white/20 hover:bg-white/[.06]">
+            GitHub ↗
+          </a>
+        </div>
+
+        <div class="mt-10 flex flex-wrap gap-x-6 gap-y-2 text-xs text-zinc-500 mono">
+          <span>Python</span>
+          <span>FastAPI</span>
+          <span>PostgreSQL</span>
+          <span>Playwright</span>
+          <span>Next.js</span>
+        </div>
+      </div>
+
+      <div class="hidden md:block">
+        <div class="card rounded-3xl p-5 shadow-2xl shadow-black/30">
+          <div class="mb-4 flex items-center justify-between">
+            <span class="mono text-xs text-zinc-500">~/elias/backend</span>
+            <span class="text-xs text-lime-300">● online</span>
+          </div>
+
+          <div class="rounded-2xl border border-white/5 bg-black/40 p-5 font-mono text-sm leading-7 text-zinc-400">
+            <div><span class="text-zinc-600">$</span> python build.py</div>
+            <div class="text-zinc-300">→ designing API...</div>
+            <div class="text-zinc-300">→ processing data...</div>
+            <div class="text-zinc-300">→ automating workflows...</div>
+            <div class="mt-2 text-lime-300">✓ shipped</div>
+          </div>
+
+          <div class="mt-4 grid grid-cols-2 gap-3">
+            <div class="rounded-2xl border border-white/5 bg-white/[.025] p-4">
+              <div class="text-2xl font-bold">API</div>
+              <div class="mt-1 text-xs text-zinc-500">Backend systems</div>
+            </div>
+            <div class="rounded-2xl border border-white/5 bg-white/[.025] p-4">
+              <div class="text-2xl font-bold">AUTO</div>
+              <div class="mt-1 text-xs text-zinc-500">Workflow automation</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work" class="scroll-mt-28 py-14">
+      <div class="mb-8">
+        <p class="mono text-xs uppercase tracking-[.2em] text-lime-300">01 / Selected work</p>
+        <h2 class="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Things I'm building</h2>
+        <p class="mt-3 max-w-2xl text-zinc-500">A selection of engineering, automation, SEO, and product projects.</p>
+      </div>
+
+      <div class="grid gap-4 md:grid-cols-2">
+        <article class="card rounded-3xl p-6 md:p-8">
+          <div class="flex items-start justify-between gap-4">
+            <div class="rounded-xl bg-lime-400/10 px-3 py-2 text-xs font-semibold text-lime-300">PRODUCT</div>
+            <span class="mono text-xs text-zinc-600">01</span>
+          </div>
+          <h3 class="mt-6 text-2xl font-bold">Suntrixa</h3>
+          <p class="mt-3 leading-7 text-zinc-400">
+            Solar intelligence and product discovery platform combining e-commerce,
+            solution pages, learning resources, and interactive solar tools.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span class="rounded-lg bg-white/5 px-2.5 py-1 text-xs text-zinc-400">Next.js</span>
+            <span class="rounded-lg bg-white/5 px-2.5 py-1 text-xs text-zinc-400">SEO/GEO</span>
+            <span class="rounded-lg bg-white/5 px-2.5 py-1 text-xs text-zinc-400">WooCommerce</span>
+          </div>
+        </article>
+
+        <article class="card rounded-3xl p-6 md:p-8">
+          <div class="flex items-start justify-between gap-4">
+            <div class="rounded-xl bg-blue-400/10 px-3 py-2 text-xs font-semibold text-blue-300">AUTOMATION</div>
+            <span class="mono text-xs text-zinc-600">02</span>
+          </div>
+          <h3 class="mt-6 text-2xl font-bold">Supplier Data Pipeline</h3>
+          <p class="mt-3 leading-7 text-zinc-400">
+            Automated collection and normalization workflow for electronic-component
+            inventory data, designed around browser automation and structured exports.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span class="rounded-lg bg-white/5 px-2.5 py-1 text-xs text-zinc-400">Python</span>
+            <span class="rounded-lg bg-white/5 px-2.5 py-1 text-xs text-zinc-400">Playwright</span>
+            <span class="rounded-lg bg-white/5 px-2.5 py-1 text-xs text-zinc-400">ETL</span>
+          </div>
+        </article>
+
+        <article class="card rounded-3xl p-6 md:p-8">
+          <div class="flex items-start justify-between gap-4">
+            <div class="rounded-xl bg-purple-400/10 px-3 py-2 text-xs font-semibold text-purple-300">PLATFORM</div>
+            <span class="mono text-xs text-zinc-600">03</span>
+          </div>
+          <h3 class="mt-6 text-2xl font-bold">School Management System</h3>
+          <p class="mt-3 leading-7 text-zinc-400">
+            Desktop-first school operations platform covering admissions, attendance,
+            exams, results, fees, salaries, and bilingual workflows.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span class="rounded-lg bg-white/5 px-2.5 py-1 text-xs text-zinc-400">Python</span>
+            <span class="rounded-lg bg-white/5 px-2.5 py-1 text-xs text-zinc-400">Database</span>
+            <span class="rounded-lg bg-white/5 px-2.5 py-1 text-xs text-zinc-400">Bengali / English</span>
+          </div>
+        </article>
+
+        <article class="card rounded-3xl p-6 md:p-8">
+          <div class="flex items-start justify-between gap-4">
+            <div class="rounded-xl bg-orange-400/10 px-3 py-2 text-xs font-semibold text-orange-300">SEO / DATA</div>
+            <span class="mono text-xs text-zinc-600">04</span>
+          </div>
+          <h3 class="mt-6 text-2xl font-bold">Phone Specs Directory</h3>
+          <p class="mt-3 leading-7 text-zinc-400">
+            Search-focused phone specification directory designed around structured
+            product data, technical SEO, and generative search visibility.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span class="rounded-lg bg-white/5 px-2.5 py-1 text-xs text-zinc-400">SEO</span>
+            <span class="rounded-lg bg-white/5 px-2.5 py-1 text-xs text-zinc-400">GEO</span>
+            <span class="rounded-lg bg-white/5 px-2.5 py-1 text-xs text-zinc-400">Data</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- STACK -->
+    <section id="stack" class="scroll-mt-28 py-14">
+      <div class="mb-8">
+        <p class="mono text-xs uppercase tracking-[.2em] text-lime-300">02 / Toolkit</p>
+        <h2 class="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">My technical stack</h2>
+      </div>
+
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="card rounded-2xl p-5">
+          <p class="text-sm font-semibold">Backend</p>
+          <p class="mt-3 text-sm leading-6 text-zinc-500">Python · FastAPI · Django · REST APIs · Pydantic</p>
+        </div>
+        <div class="card rounded-2xl p-5">
+          <p class="text-sm font-semibold">Data</p>
+          <p class="mt-3 text-sm leading-6 text-zinc-500">PostgreSQL · SQLAlchemy · Redis · ETL · Async processing</p>
+        </div>
+        <div class="card rounded-2xl p-5">
+          <p class="text-sm font-semibold">Automation</p>
+          <p class="mt-3 text-sm leading-6 text-zinc-500">Playwright · Scrapy · Selenium · Browser automation</p>
+        </div>
+        <div class="card rounded-2xl p-5">
+          <p class="text-sm font-semibold">Frontend</p>
+          <p class="mt-3 text-sm leading-6 text-zinc-500">Next.js · React · Tailwind CSS · Responsive UI</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="scroll-mt-28 py-14">
+      <div class="grid gap-5 lg:grid-cols-[.8fr_1.2fr]">
+        <div class="card rounded-3xl p-7">
+          <p class="mono text-xs uppercase tracking-[.2em] text-lime-300">03 / About</p>
+          <h2 class="mt-4 text-3xl font-bold tracking-tight">Engineering with a product mindset.</h2>
+        </div>
+
+        <div class="card rounded-3xl p-7">
+          <p class="leading-8 text-zinc-400">
+            I enjoy turning messy real-world problems into reliable software:
+            APIs that are easy to consume, automation that saves repetitive work,
+            data pipelines that stay maintainable, and websites that are discoverable.
+          </p>
+          <p class="mt-5 leading-8 text-zinc-400">
+            My strongest area is Python backend engineering, while I also work across
+            frontend development, SEO, GEO, scraping, and product architecture.
+          </p>
+
+          <div class="mt-7 flex flex-wrap gap-2">
+            <span class="rounded-full border border-white/10 px-3 py-1.5 text-xs text-zinc-400">Problem solving</span>
+            <span class="rounded-full border border-white/10 px-3 py-1.5 text-xs text-zinc-400">Async systems</span>
+            <span class="rounded-full border border-white/10 px-3 py-1.5 text-xs text-zinc-400">Automation</span>
+            <span class="rounded-full border border-white/10 px-3 py-1.5 text-xs text-zinc-400">SEO / GEO</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="scroll-mt-28 py-14">
+      <div class="relative overflow-hidden rounded-[2rem] border border-lime-400/20 bg-lime-400/[.06] p-7 sm:p-10">
+        <div class="absolute -right-24 -top-24 h-64 w-64 rounded-full bg-lime-400/10 blur-3xl"></div>
+        <div class="relative">
+          <p class="mono text-xs uppercase tracking-[.2em] text-lime-300">04 / Contact</p>
+          <h2 class="mt-4 max-w-3xl text-4xl font-extrabold tracking-tight sm:text-5xl">
+            Have a problem worth automating?
+          </h2>
+          <p class="mt-4 max-w-2xl leading-7 text-zinc-400">
+            I'm open to backend projects, automation work, internships, and product collaborations.
+          </p>
+
+          <div class="mt-7 flex flex-wrap gap-3">
+            <a href="mailto:ahmedelias@qq.com"
+               class="rounded-xl bg-lime-400 px-5 py-3 text-sm font-bold text-black transition hover:bg-lime-300">
+              ahmedelias@qq.com
+            </a>
+            <a href="https://linkedin.com/in/elias-ahmed-946875251" target="_blank" rel="noreferrer"
+               class="rounded-xl border border-white/10 bg-black/20 px-5 py-3 text-sm font-semibold transition hover:bg-black/30">
+              LinkedIn ↗
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mx-auto flex max-w-6xl flex-col gap-3 border-t border-white/10 px-4 py-8 text-xs text-zinc-600 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+    <span>© 2026 Elias Ahmed. Built with HTML + Tailwind CSS.</span>
+    <span class="mono">Python / Backend / Automation</span>
+  </footer>
 </body>
 </html>
