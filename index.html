@@ -1,120 +1,302 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0a0a0a" />
-  <meta name="description" content="Elias Ahmed — Python backend developer building APIs, automation systems, data pipelines, and SEO-focused web products." />
-  <meta name="author" content="Elias Ahmed" />
-
-  <meta property="og:title" content="Elias Ahmed — Python Backend Developer" />
-  <meta property="og:description" content="Backend engineering, automation, data pipelines, web scraping, and full-stack product development." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://elias702.github.io/" />
+  <meta name="theme-color" content="#090a0c" />
+  <meta name="color-scheme" content="dark" />
 
   <title>Elias Ahmed — Python Backend Developer & Automation Engineer</title>
+  <meta name="description" content="Elias Ahmed — Python Backend Developer & Automation Engineer specializing in backend systems, web scraping, automation, ETL pipelines, APIs, and data-driven products." />
+  <meta name="author" content="Elias Ahmed" />
+  <meta name="robots" content="index, follow" />
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-            mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'monospace']
-          }
-        }
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://elias702.github.io/" />
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://elias702.github.io/" />
+  <meta property="og:title" content="Elias Ahmed — Python Backend Developer & Automation Engineer" />
+  <meta property="og:description" content="I build systems that turn data into useful products. Backend engineering, web scraping, automation, ETL, and full-stack product development." />
+  <meta property="og:site_name" content="Elias Ahmed" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:url" content="https://elias702.github.io/" />
+  <meta name="twitter:title" content="Elias Ahmed — Python Backend Developer & Automation Engineer" />
+  <meta name="twitter:description" content="Backend systems, web scraping, automation, ETL pipelines, APIs, and data-driven web products." />
+
+  <!-- Favicon (SVG data URI for zero external asset dependency) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230e1014'/%3E%3Ctext x='16' y='21' font-size='15' font-family='monospace' font-weight='bold' fill='%23a3e635' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E" />
+
+  <!-- Fonts: Preconnect & asynchronous swap -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Self-Contained High-Performance CSS (Zero CDN overhead, zero layout shift) -->
+  <style>
+    /* ==========================================================================
+       CSS Variables & Design Tokens (Dark-first, near-black, refined emerald/lime)
+       ========================================================================== */
+    :root {
+      --bg: #090a0c;
+      --bg-subtle: #0e1014;
+      --surface: #13161c;
+      --surface-elevated: #181c24;
+      --surface-hover: #1c212b;
+      --line: rgba(255, 255, 255, 0.08);
+      --line-hover: rgba(163, 230, 53, 0.35);
+      --line-focus: #a3e635;
+      
+      --text: #f3f4f6;
+      --text-muted: #9ca3af;
+      --text-dim: #6b7280;
+      
+      --accent: #a3e635;
+      --accent-dim: rgba(163, 230, 53, 0.12);
+      --accent-border: rgba(163, 230, 53, 0.28);
+      --accent-glow: rgba(163, 230, 53, 0.15);
+
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+    }
+
+    /* Box sizing and core resets */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      min-height: 100vh;
+      overflow-x: clip;
+      position: relative;
+      background-image: 
+        radial-gradient(ellipse 60% 40% at 50% -10%, rgba(163, 230, 53, 0.07), transparent 70%),
+        radial-gradient(ellipse 40% 30% at 90% 20%, rgba(59, 130, 246, 0.04), transparent 60%);
+      background-repeat: no-repeat;
+    }
+
+    ::selection {
+      background: rgba(163, 230, 53, 0.25);
+      color: #ffffff;
+    }
+
+    /* Subtle technical grid background */
+    .grid-pattern {
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+      background-size: 40px 40px;
+      mask-image: radial-gradient(ellipse at 50% 30%, black 40%, transparent 80%);
+      -webkit-mask-image: radial-gradient(ellipse at 50% 30%, black 40%, transparent 80%);
+    }
+
+    /* Typography & Utilities */
+    .mono { font-family: var(--font-mono); }
+    .text-accent { color: var(--accent); }
+    .text-muted { color: var(--text-muted); }
+    .text-dim { color: var(--text-dim); }
+
+    /* Container constraints */
+    .container {
+      width: 100%;
+      max-width: 72rem; /* 1152px */
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+    @media (min-width: 640px) {
+      .container {
+        padding-left: 1.75rem;
+        padding-right: 1.75rem;
       }
     }
-  </script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      color-scheme: dark;
-      --bg: #080808;
-      --panel: #101010;
-      --line: rgba(255,255,255,.09);
-      --muted: #a1a1aa;
-      --text: #f5f5f5;
-      --accent: #a3e635;
+    /* Skip to main content link for keyboard users */
+    .skip-link {
+      position: absolute;
+      top: -3rem;
+      left: 1rem;
+      background: var(--accent);
+      color: #000;
+      padding: 0.5rem 1rem;
+      font-weight: 600;
+      font-size: 0.875rem;
+      z-index: 100;
+      transition: top 0.2s ease;
+      border-radius: 0.375rem;
+      text-decoration: none;
+    }
+    .skip-link:focus {
+      top: 1rem;
     }
 
-    html { scroll-behavior: smooth; }
-    body {
-      background:
-        radial-gradient(circle at 80% 0%, rgba(163,230,53,.08), transparent 30rem),
-        radial-gradient(circle at 10% 20%, rgba(59,130,246,.06), transparent 26rem),
-        var(--bg);
+    /* Focus styling for WCAG AA */
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    /* Navigation */
+    .nav-bar {
+      position: relative;
+      width: 100%;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      background: rgba(14, 16, 20, 0.85);
+      border: 1px solid var(--line);
+      border-radius: 1rem;
+      transition: border-color 0.2s ease;
+    }
+
+    /* Surface Cards & Bento Items */
+    .bento-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 0.875rem;
+      padding: 1.5rem;
+      transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      position: relative;
+    }
+    @media (min-width: 768px) {
+      .bento-card {
+        padding: 1.75rem;
+      }
+    }
+    .bento-card:hover {
+      border-color: var(--line-hover);
+      background: var(--surface-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px -10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Pill Tag */
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.25rem 0.625rem;
+      font-size: 0.75rem;
+      line-height: 1;
+      font-weight: 500;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--line);
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+    .tag-accent {
+      background: var(--accent-dim);
+      border-color: var(--accent-border);
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.6875rem 1.375rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      line-height: 1.25rem;
+      border-radius: 0.625rem;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      min-height: 44px; /* Accessible touch target */
+    }
+    .btn-primary {
+      background-color: var(--accent);
+      color: #050608;
+      border: 1px solid var(--accent);
+    }
+    .btn-primary:hover {
+      background-color: #bef264;
+      border-color: #bef264;
+      transform: translateY(-1px);
+    }
+    .btn-secondary {
+      background-color: rgba(255, 255, 255, 0.04);
       color: var(--text);
-    }
-
-    ::selection { background: rgba(163,230,53,.25); color: #fff; }
-
-    .grid-bg {
-      background-image:
-        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
-      background-size: 48px 48px;
-      mask-image: linear-gradient(to bottom, black, transparent 85%);
-    }
-
-    .glass {
-      background: rgba(16,16,16,.72);
       border: 1px solid var(--line);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
+    }
+    .btn-secondary:hover {
+      background-color: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-1px);
     }
 
-    .card {
-      background: linear-gradient(145deg, rgba(255,255,255,.045), rgba(255,255,255,.018));
-      border: 1px solid var(--line);
-      transition: transform .25s ease, border-color .25s ease, background .25s ease;
+    /* Subtle Section Numbers */
+    .section-num {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+      display: inline-block;
     }
 
-    .card:hover {
-      transform: translateY(-3px);
-      border-color: rgba(163,230,53,.28);
-      background: linear-gradient(145deg, rgba(255,255,255,.065), rgba(255,255,255,.022));
+    .section-title {
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      color: var(--text);
+      line-height: 1.25;
+    }
+    @media (min-width: 640px) {
+      .section-title { font-size: 2.25rem; }
     }
 
-    .accent { color: var(--accent); }
-    .mono { font-family: 'JetBrains Mono', monospace; }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(16px);
-      animation: reveal .7s ease forwards;
+    .section-intro {
+      margin-top: 0.75rem;
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.625;
+      max-width: 42rem;
     }
 
-    .delay-1 { animation-delay: .08s; }
-    .delay-2 { animation-delay: .16s; }
-    .delay-3 { animation-delay: .24s; }
-
-    @keyframes reveal {
-      to { opacity: 1; transform: translateY(0); }
-    }
-
+    /* Motion preferences */
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       *, *::before, *::after {
-        animation-duration: .01ms !important;
-        transition-duration: .01ms !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
       }
-      .reveal { opacity: 1; transform: none; }
+      .bento-card:hover { transform: none; }
+      .btn:hover { transform: none; }
     }
   </style>
 
+  <!-- Schema.org JSON-LD structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Elias Ahmed",
     "url": "https://elias702.github.io/",
-    "jobTitle": "Python Backend Developer",
+    "jobTitle": "Python Backend Developer & Automation Engineer",
     "sameAs": [
       "https://github.com/elias702",
       "https://linkedin.com/in/elias-ahmed-946875251"
@@ -123,275 +305,826 @@
       "Python",
       "FastAPI",
       "Django",
+      "REST APIs",
       "Web Scraping",
       "Playwright",
-      "Automation",
-      "REST APIs",
+      "Scrapy",
+      "Selenium",
+      "ETL Pipelines",
+      "Data Extraction",
       "PostgreSQL",
+      "SQLite",
       "Redis",
-      "SEO",
-      "GEO",
+      "Full-Stack Development",
       "Next.js",
-      "React"
+      "React",
+      "Tailwind CSS",
+      "Technical SEO",
+      "Generative Engine Optimization (GEO)"
     ]
   }
   </script>
 </head>
 
-<body class="min-h-screen font-sans antialiased">
-  <div class="fixed inset-0 pointer-events-none grid-bg"></div>
+<body>
+  <a href="#main-content" class="skip-link" id="skip-to-content">Skip to main content</a>
+  <div class="fixed inset-0 pointer-events-none grid-pattern" style="position: fixed; inset: 0; pointer-events: none; z-index: 0;"></div>
 
-  <nav class="sticky top-0 z-50">
-    <div class="glass mx-auto mt-3 flex max-w-6xl items-center justify-between rounded-2xl px-4 py-3 sm:px-5">
-      <a href="#" class="font-semibold tracking-tight">Elias<span class="accent">.</span></a>
+  <!-- STICKY HEADER NAVIGATION -->
+  <header style="position: sticky; top: 16px; z-index: 50; padding: 0 1rem; margin-top: 16px;">
+    <div class="container" style="max-width: 72rem; margin: 0 auto; padding: 0;">
+      <nav class="nav-bar" aria-label="Main Navigation" style="display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1.25rem;">
+        <!-- Identity / Logo -->
+        <a href="#" style="text-decoration: none; color: var(--text); font-weight: 700; font-size: 1.0625rem; letter-spacing: -0.02em; display: inline-flex; align-items: center; gap: 0.25rem;">
+          Elias Ahmed<span class="text-accent" style="font-size: 1.25rem; line-height: 1;">.</span>
+        </a>
 
-      <div class="hidden items-center gap-6 text-sm text-zinc-400 md:flex">
-        <a class="transition hover:text-white" href="#work">Work</a>
-        <a class="transition hover:text-white" href="#stack">Stack</a>
-        <a class="transition hover:text-white" href="#about">About</a>
-        <a class="transition hover:text-white" href="#contact">Contact</a>
+        <!-- Desktop Navigation Items -->
+        <div class="nav-links" style="display: flex; align-items: center; gap: 1.5rem;" id="desktop-nav">
+          <a href="#experience" style="text-decoration: none; color: var(--text-muted); font-size: 0.875rem; font-weight: 500; transition: color 0.15s ease;" onmouseover="this.style.color='#f3f4f6'" onmouseout="this.style.color='#9ca3af'">Experience</a>
+          <a href="#products" style="text-decoration: none; color: var(--text-muted); font-size: 0.875rem; font-weight: 500; transition: color 0.15s ease;" onmouseover="this.style.color='#f3f4f6'" onmouseout="this.style.color='#9ca3af'">Products</a>
+          <a href="#capabilities" style="text-decoration: none; color: var(--text-muted); font-size: 0.875rem; font-weight: 500; transition: color 0.15s ease;" onmouseover="this.style.color='#f3f4f6'" onmouseout="this.style.color='#9ca3af'">Capabilities</a>
+          <a href="#approach" style="text-decoration: none; color: var(--text-muted); font-size: 0.875rem; font-weight: 500; transition: color 0.15s ease;" onmouseover="this.style.color='#f3f4f6'" onmouseout="this.style.color='#9ca3af'">Approach</a>
+          <a href="#about" style="text-decoration: none; color: var(--text-muted); font-size: 0.875rem; font-weight: 500; transition: color 0.15s ease;" onmouseover="this.style.color='#f3f4f6'" onmouseout="this.style.color='#9ca3af'">About</a>
+          <a href="#contact" style="text-decoration: none; color: var(--text-muted); font-size: 0.875rem; font-weight: 500; transition: color 0.15s ease;" onmouseover="this.style.color='#f3f4f6'" onmouseout="this.style.color='#9ca3af'">Contact</a>
+        </div>
+
+        <!-- Right Side: Availability / Quick Action & Mobile Toggle -->
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <a href="#contact" class="btn btn-primary" style="padding: 0.4375rem 0.875rem; font-size: 0.8125rem; border-radius: 0.5rem; min-height: 38px;">
+            Let's talk →
+          </a>
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" style="display: none; background: transparent; border: 1px solid var(--line); border-radius: 0.5rem; padding: 0.5rem; color: var(--text); cursor: pointer; min-width: 40px; min-height: 40px;">
+            <svg id="menu-icon-bars" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="18" x2="20" y2="18"></line></svg>
+            <svg id="menu-icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Mobile Dropdown Navigation Drawer -->
+      <div id="mobile-nav-drawer" style="display: none; margin-top: 0.5rem; background: var(--surface); border: 1px solid var(--line); border-radius: 0.875rem; padding: 1rem; flex-direction: column; gap: 0.75rem;">
+        <a href="#experience" class="mobile-nav-link" style="text-decoration: none; color: var(--text); padding: 0.5rem 0; font-weight: 500; font-size: 0.9375rem; border-bottom: 1px solid var(--line);">Experience</a>
+        <a href="#products" class="mobile-nav-link" style="text-decoration: none; color: var(--text); padding: 0.5rem 0; font-weight: 500; font-size: 0.9375rem; border-bottom: 1px solid var(--line);">Selected Products</a>
+        <a href="#capabilities" class="mobile-nav-link" style="text-decoration: none; color: var(--text); padding: 0.5rem 0; font-weight: 500; font-size: 0.9375rem; border-bottom: 1px solid var(--line);">Technical Capabilities</a>
+        <a href="#approach" class="mobile-nav-link" style="text-decoration: none; color: var(--text); padding: 0.5rem 0; font-weight: 500; font-size: 0.9375rem; border-bottom: 1px solid var(--line);">Engineering Approach</a>
+        <a href="#about" class="mobile-nav-link" style="text-decoration: none; color: var(--text); padding: 0.5rem 0; font-weight: 500; font-size: 0.9375rem; border-bottom: 1px solid var(--line);">About</a>
+        <a href="#contact" class="mobile-nav-link" style="text-decoration: none; color: var(--text); padding: 0.5rem 0; font-weight: 500; font-size: 0.9375rem;">Contact</a>
       </div>
-
-      <a href="mailto:ahmedelias@qq.com"
-         class="rounded-xl border border-lime-400/30 bg-lime-400/10 px-3 py-2 text-xs font-semibold text-lime-300 transition hover:bg-lime-400/15">
-        Let's talk →
-      </a>
     </div>
-  </nav>
+  </header>
 
-  <main class="relative mx-auto max-w-6xl px-4 pb-16 sm:px-6">
-    <!-- HERO -->
-    <section class="grid min-h-[78vh] items-center gap-10 py-16 md:grid-cols-[1.35fr_.65fr] md:py-24">
-      <div>
-        <div class="reveal inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[.03] px-3 py-1.5 text-xs text-zinc-300">
-          <span class="h-2 w-2 animate-pulse rounded-full bg-lime-400"></span>
-          Available for freelance & internship opportunities
-        </div>
+  <style>
+    @media (max-width: 768px) {
+      #desktop-nav { display: none !important; }
+      #mobile-menu-btn { display: inline-flex !important; align-items: center; justify-content: center; }
+    }
+  </style>
 
-        <h1 class="reveal delay-1 mt-6 max-w-4xl text-5xl font-extrabold leading-[1.02] tracking-[-.04em] sm:text-6xl lg:text-8xl">
-          I build the <span class="accent">backend</span><br />
-          behind useful products.
-        </h1>
+  <!-- MAIN CONTENT CONTAINER -->
+  <main id="main-content" class="container" style="position: relative; z-index: 10; padding-top: 3.5rem; padding-bottom: 6rem;">
 
-        <p class="reveal delay-2 mt-6 max-w-2xl text-base leading-7 text-zinc-400 sm:text-lg">
-          Python backend developer focused on APIs, automation, data pipelines,
-          web scraping, and practical full-stack products.
-        </p>
-
-        <div class="reveal delay-3 mt-8 flex flex-wrap gap-3">
-          <a href="#work" class="rounded-xl bg-white px-5 py-3 text-sm font-semibold text-black transition hover:bg-zinc-200">
-            View selected work
-          </a>
-          <a href="https://github.com/elias702" target="_blank" rel="noreferrer"
-             class="rounded-xl border border-white/10 bg-white/[.03] px-5 py-3 text-sm font-semibold text-white transition hover:border-white/20 hover:bg-white/[.06]">
-            GitHub ↗
-          </a>
-        </div>
-
-        <div class="mt-10 flex flex-wrap gap-x-6 gap-y-2 text-xs text-zinc-500 mono">
-          <span>Python</span>
-          <span>FastAPI</span>
-          <span>PostgreSQL</span>
-          <span>Playwright</span>
-          <span>Next.js</span>
-        </div>
-      </div>
-
-      <div class="hidden md:block">
-        <div class="card rounded-3xl p-5 shadow-2xl shadow-black/30">
-          <div class="mb-4 flex items-center justify-between">
-            <span class="mono text-xs text-zinc-500">~/elias/backend</span>
-            <span class="text-xs text-lime-300">● online</span>
+    <!-- ==========================================================================
+         SECTION 1: HERO
+         ========================================================================== -->
+    <section id="hero" style="padding: 2rem 0 4.5rem 0;" aria-label="Introduction">
+      <div style="display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: center;">
+        
+        <div style="max-width: 52rem;">
+          <!-- Availability Pill -->
+          <div style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.3125rem 0.875rem; border-radius: 9999px; background: rgba(255, 255, 255, 0.03); border: 1px solid var(--line); font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+            <span style="width: 0.5rem; height: 0.5rem; border-radius: 9999px; background: var(--accent); display: inline-block; box-shadow: 0 0 8px var(--accent);"></span>
+            Available for freelance & contract engineering
           </div>
 
-          <div class="rounded-2xl border border-white/5 bg-black/40 p-5 font-mono text-sm leading-7 text-zinc-400">
-            <div><span class="text-zinc-600">$</span> python build.py</div>
-            <div class="text-zinc-300">→ designing API...</div>
-            <div class="text-zinc-300">→ processing data...</div>
-            <div class="text-zinc-300">→ automating workflows...</div>
-            <div class="mt-2 text-lime-300">✓ shipped</div>
-          </div>
+          <!-- Name & Core Title -->
+          <h1 style="font-size: clamp(2.25rem, 5.5vw, 4.25rem); font-weight: 800; line-height: 1.08; letter-spacing: -0.035em; color: var(--text); margin-bottom: 1.25rem;">
+            Elias Ahmed
+          </h1>
 
-          <div class="mt-4 grid grid-cols-2 gap-3">
-            <div class="rounded-2xl border border-white/5 bg-white/[.025] p-4">
-              <div class="text-2xl font-bold">API</div>
-              <div class="mt-1 text-xs text-zinc-500">Backend systems</div>
-            </div>
-            <div class="rounded-2xl border border-white/5 bg-white/[.025] p-4">
-              <div class="text-2xl font-bold">AUTO</div>
-              <div class="mt-1 text-xs text-zinc-500">Workflow automation</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- WORK -->
-    <section id="work" class="scroll-mt-28 py-14">
-      <div class="mb-8">
-        <p class="mono text-xs uppercase tracking-[.2em] text-lime-300">01 / Selected work</p>
-        <h2 class="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Things I'm building</h2>
-        <p class="mt-3 max-w-2xl text-zinc-500">A selection of engineering, automation, SEO, and product projects.</p>
-      </div>
-
-      <div class="grid gap-4 md:grid-cols-2">
-        <article class="card rounded-3xl p-6 md:p-8">
-          <div class="flex items-start justify-between gap-4">
-            <div class="rounded-xl bg-lime-400/10 px-3 py-2 text-xs font-semibold text-lime-300">PRODUCT</div>
-            <span class="mono text-xs text-zinc-600">01</span>
-          </div>
-          <h3 class="mt-6 text-2xl font-bold">Suntrixa</h3>
-          <p class="mt-3 leading-7 text-zinc-400">
-            Solar intelligence and product discovery platform combining e-commerce,
-            solution pages, learning resources, and interactive solar tools.
-          </p>
-          <div class="mt-6 flex flex-wrap gap-2">
-            <span class="rounded-lg bg-white/5 px-2.5 py-1 text-xs text-zinc-400">Next.js</span>
-            <span class="rounded-lg bg-white/5 px-2.5 py-1 text-xs text-zinc-400">SEO/GEO</span>
-            <span class="rounded-lg bg-white/5 px-2.5 py-1 text-xs text-zinc-400">WooCommerce</span>
-          </div>
-        </article>
-
-        <article class="card rounded-3xl p-6 md:p-8">
-          <div class="flex items-start justify-between gap-4">
-            <div class="rounded-xl bg-blue-400/10 px-3 py-2 text-xs font-semibold text-blue-300">AUTOMATION</div>
-            <span class="mono text-xs text-zinc-600">02</span>
-          </div>
-          <h3 class="mt-6 text-2xl font-bold">Supplier Data Pipeline</h3>
-          <p class="mt-3 leading-7 text-zinc-400">
-            Automated collection and normalization workflow for electronic-component
-            inventory data, designed around browser automation and structured exports.
-          </p>
-          <div class="mt-6 flex flex-wrap gap-2">
-            <span class="rounded-lg bg-white/5 px-2.5 py-1 text-xs text-zinc-400">Python</span>
-            <span class="rounded-lg bg-white/5 px-2.5 py-1 text-xs text-zinc-400">Playwright</span>
-            <span class="rounded-lg bg-white/5 px-2.5 py-1 text-xs text-zinc-400">ETL</span>
-          </div>
-        </article>
-
-        <article class="card rounded-3xl p-6 md:p-8">
-          <div class="flex items-start justify-between gap-4">
-            <div class="rounded-xl bg-purple-400/10 px-3 py-2 text-xs font-semibold text-purple-300">PLATFORM</div>
-            <span class="mono text-xs text-zinc-600">03</span>
-          </div>
-          <h3 class="mt-6 text-2xl font-bold">School Management System</h3>
-          <p class="mt-3 leading-7 text-zinc-400">
-            Desktop-first school operations platform covering admissions, attendance,
-            exams, results, fees, salaries, and bilingual workflows.
-          </p>
-          <div class="mt-6 flex flex-wrap gap-2">
-            <span class="rounded-lg bg-white/5 px-2.5 py-1 text-xs text-zinc-400">Python</span>
-            <span class="rounded-lg bg-white/5 px-2.5 py-1 text-xs text-zinc-400">Database</span>
-            <span class="rounded-lg bg-white/5 px-2.5 py-1 text-xs text-zinc-400">Bengali / English</span>
-          </div>
-        </article>
-
-        <article class="card rounded-3xl p-6 md:p-8">
-          <div class="flex items-start justify-between gap-4">
-            <div class="rounded-xl bg-orange-400/10 px-3 py-2 text-xs font-semibold text-orange-300">SEO / DATA</div>
-            <span class="mono text-xs text-zinc-600">04</span>
-          </div>
-          <h3 class="mt-6 text-2xl font-bold">Phone Specs Directory</h3>
-          <p class="mt-3 leading-7 text-zinc-400">
-            Search-focused phone specification directory designed around structured
-            product data, technical SEO, and generative search visibility.
-          </p>
-          <div class="mt-6 flex flex-wrap gap-2">
-            <span class="rounded-lg bg-white/5 px-2.5 py-1 text-xs text-zinc-400">SEO</span>
-            <span class="rounded-lg bg-white/5 px-2.5 py-1 text-xs text-zinc-400">GEO</span>
-            <span class="rounded-lg bg-white/5 px-2.5 py-1 text-xs text-zinc-400">Data</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- STACK -->
-    <section id="stack" class="scroll-mt-28 py-14">
-      <div class="mb-8">
-        <p class="mono text-xs uppercase tracking-[.2em] text-lime-300">02 / Toolkit</p>
-        <h2 class="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">My technical stack</h2>
-      </div>
-
-      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        <div class="card rounded-2xl p-5">
-          <p class="text-sm font-semibold">Backend</p>
-          <p class="mt-3 text-sm leading-6 text-zinc-500">Python · FastAPI · Django · REST APIs · Pydantic</p>
-        </div>
-        <div class="card rounded-2xl p-5">
-          <p class="text-sm font-semibold">Data</p>
-          <p class="mt-3 text-sm leading-6 text-zinc-500">PostgreSQL · SQLAlchemy · Redis · ETL · Async processing</p>
-        </div>
-        <div class="card rounded-2xl p-5">
-          <p class="text-sm font-semibold">Automation</p>
-          <p class="mt-3 text-sm leading-6 text-zinc-500">Playwright · Scrapy · Selenium · Browser automation</p>
-        </div>
-        <div class="card rounded-2xl p-5">
-          <p class="text-sm font-semibold">Frontend</p>
-          <p class="mt-3 text-sm leading-6 text-zinc-500">Next.js · React · Tailwind CSS · Responsive UI</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="scroll-mt-28 py-14">
-      <div class="grid gap-5 lg:grid-cols-[.8fr_1.2fr]">
-        <div class="card rounded-3xl p-7">
-          <p class="mono text-xs uppercase tracking-[.2em] text-lime-300">03 / About</p>
-          <h2 class="mt-4 text-3xl font-bold tracking-tight">Engineering with a product mindset.</h2>
-        </div>
-
-        <div class="card rounded-3xl p-7">
-          <p class="leading-8 text-zinc-400">
-            I enjoy turning messy real-world problems into reliable software:
-            APIs that are easy to consume, automation that saves repetitive work,
-            data pipelines that stay maintainable, and websites that are discoverable.
-          </p>
-          <p class="mt-5 leading-8 text-zinc-400">
-            My strongest area is Python backend engineering, while I also work across
-            frontend development, SEO, GEO, scraping, and product architecture.
+          <!-- Role & Core Pillars -->
+          <p class="mono text-accent" style="font-size: clamp(1rem, 2.2vw, 1.3125rem); font-weight: 600; line-height: 1.4; margin-bottom: 1.25rem; letter-spacing: -0.015em;">
+            Python Backend Developer &amp; Automation Engineer
           </p>
 
-          <div class="mt-7 flex flex-wrap gap-2">
-            <span class="rounded-full border border-white/10 px-3 py-1.5 text-xs text-zinc-400">Problem solving</span>
-            <span class="rounded-full border border-white/10 px-3 py-1.5 text-xs text-zinc-400">Async systems</span>
-            <span class="rounded-full border border-white/10 px-3 py-1.5 text-xs text-zinc-400">Automation</span>
-            <span class="rounded-full border border-white/10 px-3 py-1.5 text-xs text-zinc-400">SEO / GEO</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="scroll-mt-28 py-14">
-      <div class="relative overflow-hidden rounded-[2rem] border border-lime-400/20 bg-lime-400/[.06] p-7 sm:p-10">
-        <div class="absolute -right-24 -top-24 h-64 w-64 rounded-full bg-lime-400/10 blur-3xl"></div>
-        <div class="relative">
-          <p class="mono text-xs uppercase tracking-[.2em] text-lime-300">04 / Contact</p>
-          <h2 class="mt-4 max-w-3xl text-4xl font-extrabold tracking-tight sm:text-5xl">
-            Have a problem worth automating?
-          </h2>
-          <p class="mt-4 max-w-2xl leading-7 text-zinc-400">
-            I'm open to backend projects, automation work, internships, and product collaborations.
+          <!-- Core Message & Value Proposition -->
+          <p style="font-size: clamp(1.125rem, 2.2vw, 1.375rem); color: #e5e7eb; line-height: 1.55; margin-bottom: 1.25rem; font-weight: 500;">
+            "I build systems that turn data into useful products."
           </p>
 
-          <div class="mt-7 flex flex-wrap gap-3">
-            <a href="mailto:ahmedelias@qq.com"
-               class="rounded-xl bg-lime-400 px-5 py-3 text-sm font-bold text-black transition hover:bg-lime-300">
-              ahmedelias@qq.com
+          <p style="font-size: 1.0625rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 2rem; max-width: 44rem;">
+            Specialized in backend systems, web scraping, browser automation, ETL pipelines, REST APIs, and data-driven products. Focused on resilient architecture, strict schema validation, and clean interfaces.
+          </p>
+
+          <!-- CTAs and Social Links -->
+          <div style="display: flex; flex-wrap: wrap; gap: 0.875rem; align-items: center; margin-bottom: 2.25rem;">
+            <a href="#experience" class="btn btn-primary" id="hero-primary-cta">
+              View Selected Work ↓
             </a>
-            <a href="https://linkedin.com/in/elias-ahmed-946875251" target="_blank" rel="noreferrer"
-               class="rounded-xl border border-white/10 bg-black/20 px-5 py-3 text-sm font-semibold transition hover:bg-black/30">
+            <a href="https://github.com/elias702" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="hero-github-link" aria-label="GitHub Profile (opens in a new tab)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              GitHub ↗
+            </a>
+            <a href="https://linkedin.com/in/elias-ahmed-946875251" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="hero-linkedin-link" aria-label="LinkedIn Profile (opens in a new tab)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
               LinkedIn ↗
             </a>
+            <a href="#contact" class="btn btn-secondary" id="hero-contact-link">
+              Contact
+            </a>
+          </div>
+
+          <!-- Verified Core Pillars Bar -->
+          <div style="display: flex; flex-wrap: wrap; gap: 0.625rem; align-items: center; padding-top: 1rem; border-top: 1px solid var(--line);">
+            <span class="tag tag-accent">Backend Engineering</span>
+            <span class="tag tag-accent">Data &amp; Web Scraping</span>
+            <span class="tag tag-accent">Automation &amp; ETL</span>
+            <span class="tag tag-accent">Full-Stack Product Development</span>
+            <span class="tag tag-accent">SEO / GEO</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 2: COMMERCIAL EXPERIENCE
+         ========================================================================== -->
+    <section id="experience" style="padding: 4.5rem 0; scroll-margin-top: 4rem;" aria-labelledby="experience-heading">
+      <div style="margin-bottom: 2.25rem;">
+        <span class="section-num">01 / Proven Track Record</span>
+        <h2 id="experience-heading" class="section-title">Commercial Experience</h2>
+        <p class="section-intro">
+          Selected commercial and ongoing work involving data automation, e-commerce, web scraping, ETL, SEO/GEO, and product development.
+        </p>
+      </div>
+
+      <!-- Grid of Commercial Projects -->
+      <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem;">
+
+        <!-- PROJECT 01: Economedical Ltd. -->
+        <article class="bento-card" id="project-economedical" style="background: linear-gradient(175deg, rgba(24, 28, 36, 0.95), rgba(19, 22, 28, 0.95));">
+          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 0.75rem; margin-bottom: 1.25rem;">
+            <div>
+              <span class="mono text-dim" style="font-size: 0.75rem; letter-spacing: 0.05em; display: block; margin-bottom: 0.25rem;">UK-BASED MEDICAL PRODUCTS BUSINESS</span>
+              <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--text); letter-spacing: -0.02em;">
+                Economedical Ltd.
+              </h3>
+            </div>
+            <span class="tag tag-accent" style="font-size: 0.75rem;">
+              ● Ongoing Client Project
+            </span>
+          </div>
+
+          <p style="color: var(--text-muted); font-size: 0.9375rem; line-height: 1.7; margin-bottom: 1.25rem;">
+            Built and maintained an end-to-end data workflow covering product data extraction, transformation, and Shopify integration. The automated workflow extracts available product information including product names, images, descriptions, vendors, colors, quantities, packaging/box variations, and quantity-based price differences.
+          </p>
+
+          <p style="color: var(--text-muted); font-size: 0.9375rem; line-height: 1.7; margin-bottom: 1.5rem;">
+            Developed the scraping and automation workflow with Python and Playwright, along with an API layer for communication with the Shopify store. Also built the Shopify storefront and implemented custom styling and design adjustments for the business.
+          </p>
+
+          <!-- Technical Tags -->
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--line);">
+            <span class="tag">ETL</span>
+            <span class="tag">Web Scraping</span>
+            <span class="tag">Python</span>
+            <span class="tag">Playwright</span>
+            <span class="tag">Shopify</span>
+            <span class="tag">API</span>
+            <span class="tag">Custom Design</span>
+          </div>
+        </article>
+
+        <!-- 2-COLUMN GRID FOR MOBIORBIT & IC TRADING -->
+        <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem;" class="grid-md-2">
+          
+          <!-- PROJECT 02: Mobiorbit -->
+          <article class="bento-card" id="project-mobiorbit">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; margin-bottom: 1rem;">
+              <div>
+                <span class="mono text-dim" style="font-size: 0.75rem; letter-spacing: 0.05em; display: block; margin-bottom: 0.25rem;">PRODUCT-SPECIFICATION DIRECTORY</span>
+                <h3 style="font-size: 1.3125rem; font-weight: 700; color: var(--text); letter-spacing: -0.015em;">
+                  Mobiorbit
+                </h3>
+              </div>
+              <span class="tag tag-accent" style="font-size: 0.75rem;">
+                ● Ongoing
+              </span>
+            </div>
+
+            <p style="color: var(--text-muted); font-size: 0.9375rem; line-height: 1.65; margin-bottom: 1.25rem;">
+              Ongoing contribution to a product-specification directory business, working across data acquisition, structured content operations, SEO, and Generative Engine Optimization (GEO).
+            </p>
+
+            <p style="color: var(--text-muted); font-size: 0.9375rem; line-height: 1.65; margin-bottom: 1.5rem;">
+              Responsibilities include web scraping, data preparation and upload, structured content creation, and technical optimization designed for both traditional search engines and AI-powered search experiences.
+            </p>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--line);">
+              <span class="tag">Data Extraction</span>
+              <span class="tag">Content Operations</span>
+              <span class="tag">SEO</span>
+              <span class="tag">GEO</span>
+              <span class="tag">Product Development</span>
+            </div>
+          </article>
+
+          <!-- PROJECT 03: IC交易网 (IC Trading Network) -->
+          <article class="bento-card" id="project-ic-trading">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; margin-bottom: 1rem;">
+              <div>
+                <span class="mono text-dim" style="font-size: 0.75rem; letter-spacing: 0.05em; display: block; margin-bottom: 0.25rem;">IC TRADING NETWORK</span>
+                <h3 style="font-size: 1.3125rem; font-weight: 700; color: var(--text); letter-spacing: -0.015em;">
+                  IC交易网
+                </h3>
+              </div>
+              <span class="tag" style="font-size: 0.75rem;">
+                Weekly Automation
+              </span>
+            </div>
+
+            <p style="color: var(--text-muted); font-size: 0.9375rem; line-height: 1.65; margin-bottom: 1.25rem;">
+              Developed an automated weekly data-extraction workflow for IC交易网, collecting structured electronic-component marketplace data including model, inventory, manufacturer, price, validity, batch information, suppliers, and other available fields.
+            </p>
+
+            <div style="background: rgba(255, 255, 255, 0.025); border: 1px solid var(--line); border-radius: 0.5rem; padding: 0.75rem 1rem; margin-bottom: 1.25rem;">
+              <span class="mono text-dim" style="font-size: 0.75rem; display: block;">VERIFIED DATA SCALE</span>
+              <span class="mono text-accent" style="font-size: 0.9375rem; font-weight: 600;">
+                ~10,000–15,000 records / weekly run
+              </span>
+              <span style="font-size: 0.8125rem; color: var(--text-dim); display: block; margin-top: 0.125rem;">Automates collection and CSV generation depending on available data.</span>
+            </div>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--line);">
+              <span class="tag">Python</span>
+              <span class="tag">Playwright</span>
+              <span class="tag">Automation</span>
+              <span class="tag">CSV Generation</span>
+              <span class="tag">Data Extraction</span>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- PROJECT 04: Wingontravel -->
+        <article class="bento-card" id="project-wingontravel">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; margin-bottom: 1rem;">
+            <div>
+              <span class="mono text-dim" style="font-size: 0.75rem; letter-spacing: 0.05em; display: block; margin-bottom: 0.25rem;">TRAVEL PLATFORM AUTOMATION</span>
+              <h3 style="font-size: 1.3125rem; font-weight: 700; color: var(--text); letter-spacing: -0.015em;">
+                Wingontravel
+              </h3>
+            </div>
+            <span class="tag" style="font-size: 0.75rem;">
+              Project-Based System
+            </span>
+          </div>
+
+          <p style="color: var(--text-muted); font-size: 0.9375rem; line-height: 1.65; margin-bottom: 1.25rem;">
+            Built a project-based travel data automation system covering flight and hotel data collection. The automation extracts available structured information such as names, locations, prices, ratings, room types, images, and other required fields.
+          </p>
+
+          <p style="color: var(--text-muted); font-size: 0.9375rem; line-height: 1.65; margin-bottom: 1.5rem;">
+            The client provided a pre-designed database structure, and the automation was developed to collect and prepare the required data for that existing schema. Built primarily with Python and Playwright, with additional supporting automation components where required.
+          </p>
+
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--line);">
+            <span class="tag">Python</span>
+            <span class="tag">Playwright</span>
+            <span class="tag">Travel Data</span>
+            <span class="tag">Automation</span>
+            <span class="tag">Database Integration</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Style for 2-column responsive layout -->
+    <style>
+      @media (min-width: 768px) {
+        .grid-md-2 { grid-template-columns: 1fr 1fr !important; }
+      }
+    </style>
+
+    <!-- ==========================================================================
+         SECTION 3: SELECTED PRODUCTS
+         ========================================================================== -->
+    <section id="products" style="padding: 4.5rem 0; scroll-margin-top: 4rem;" aria-labelledby="products-heading">
+      <div style="margin-bottom: 2.25rem;">
+        <span class="section-num">02 / Software &amp; Platforms</span>
+        <h2 id="products-heading" class="section-title">Selected Products</h2>
+        <p class="section-intro">
+          Full-stack platforms, administrative systems, and technical intelligence tools built with Python and modern web technologies.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem;">
+
+        <!-- PRODUCT 01: School Management System -->
+        <article class="bento-card" id="product-sms">
+          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 0.5rem; margin-bottom: 1rem;">
+            <div>
+              <span class="mono text-dim" style="font-size: 0.75rem; letter-spacing: 0.05em; display: block; margin-bottom: 0.25rem;">ACADEMIC OPERATIONS &amp; GOVERNANCE</span>
+              <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--text); letter-spacing: -0.02em;">
+                School Management System
+              </h3>
+            </div>
+            <span class="tag tag-accent">Core Platform</span>
+          </div>
+
+          <p style="color: var(--text-muted); font-size: 0.9375rem; line-height: 1.7; margin-bottom: 1.25rem;">
+            A comprehensive school-management and academic operations platform designed to streamline administrative workflows, student records, and institutional reporting.
+          </p>
+
+          <!-- Known Core Functional Modules -->
+          <div style="margin-bottom: 1.5rem;">
+            <span class="mono text-dim" style="font-size: 0.75rem; display: block; margin-bottom: 0.5rem;">PROVEN FUNCTIONAL DOMAINS</span>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.375rem;">
+              <span class="tag">Student Management</span>
+              <span class="tag">Admissions</span>
+              <span class="tag">Academic Years</span>
+              <span class="tag">Classes &amp; Sections</span>
+              <span class="tag">Teacher Management</span>
+              <span class="tag">Attendance</span>
+              <span class="tag">Exams &amp; Results</span>
+              <span class="tag">Fees Tracking</span>
+              <span class="tag">Payroll</span>
+              <span class="tag">Class Routines</span>
+              <span class="tag">Role-Based Access</span>
+              <span class="tag">Reporting</span>
+            </div>
+          </div>
+
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--line);">
+            <span class="tag">Python</span>
+            <span class="tag">Database Architecture</span>
+            <span class="tag">Role-Based Control</span>
+            <span class="tag">Administrative Operations</span>
+          </div>
+        </article>
+
+        <!-- 2-COLUMN GRID: SeoLens & Riveata -->
+        <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem;" class="grid-md-2">
+          
+          <!-- PRODUCT 02: SeoLens -->
+          <article class="bento-card" id="product-seolens">
+            <div style="margin-bottom: 1rem;">
+              <span class="mono text-dim" style="font-size: 0.75rem; letter-spacing: 0.05em; display: block; margin-bottom: 0.25rem;">SEARCH &amp; DISCOVERY ENGINE</span>
+              <h3 style="font-size: 1.3125rem; font-weight: 700; color: var(--text); letter-spacing: -0.015em;">
+                SeoLens
+              </h3>
+              <p class="mono text-accent" style="font-size: 0.8125rem; font-weight: 500; margin-top: 0.125rem;">
+                AI-Powered SEO &amp; GEO Intelligence Platform
+              </p>
+            </div>
+
+            <p style="color: var(--text-muted); font-size: 0.9375rem; line-height: 1.65; margin-bottom: 1.25rem;">
+              A platform designed to help website owners, marketers, and agencies analyze and improve visibility across traditional search engines and AI-powered search experiences (Generative Engine Optimization).
+            </p>
+
+            <div style="margin-bottom: 1.25rem;">
+              <span class="mono text-dim" style="font-size: 0.75rem; display: block; margin-bottom: 0.5rem;">CORE CAPABILITIES</span>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.375rem;">
+                <span class="tag">Technical SEO Analysis</span>
+                <span class="tag">GEO Optimization</span>
+                <span class="tag">Structured Data Validation</span>
+                <span class="tag">AI-Powered Recommendations</span>
+              </div>
+            </div>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--line);">
+              <span class="tag">Technical SEO</span>
+              <span class="tag">GEO</span>
+              <span class="tag">Schema.org</span>
+              <span class="tag">Data Analysis</span>
+            </div>
+          </article>
+
+          <!-- PRODUCT 03: Riveata -->
+          <article class="bento-card" id="product-riveata">
+            <div style="margin-bottom: 1rem;">
+              <span class="mono text-dim" style="font-size: 0.75rem; letter-spacing: 0.05em; display: block; margin-bottom: 0.25rem;">ENERGY &amp; SUSTAINABILITY TECH</span>
+              <h3 style="font-size: 1.3125rem; font-weight: 700; color: var(--text); letter-spacing: -0.015em;">
+                Riveata
+              </h3>
+              <p class="mono text-accent" style="font-size: 0.8125rem; font-weight: 500; margin-top: 0.125rem;">
+                Solar Intelligence &amp; Solutions Platform
+              </p>
+            </div>
+
+            <p style="color: var(--text-muted); font-size: 0.9375rem; line-height: 1.65; margin-bottom: 1.25rem;">
+              A platform designed to help individuals and businesses understand, compare, and access solar solutions through useful information, calculation tools, curated products, and trusted partners.
+            </p>
+
+            <div style="margin-bottom: 1.25rem;">
+              <span class="mono text-dim" style="font-size: 0.75rem; display: block; margin-bottom: 0.5rem;">CORE FOCUS AREAS</span>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.375rem;">
+                <span class="tag">Solar Intelligence</span>
+                <span class="tag">Comparison Tools</span>
+                <span class="tag">Curated Product Discovery</span>
+                <span class="tag">Partner Networks</span>
+              </div>
+            </div>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--line);">
+              <span class="tag">Full-Stack</span>
+              <span class="tag">Product Engineering</span>
+              <span class="tag">Solar Intelligence</span>
+              <span class="tag">Web Platform</span>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 4: TECHNICAL CAPABILITIES
+         ========================================================================== -->
+    <section id="capabilities" style="padding: 4.5rem 0; scroll-margin-top: 4rem;" aria-labelledby="capabilities-heading">
+      <div style="margin-bottom: 2.25rem;">
+        <span class="section-num">03 / Applied Competencies</span>
+        <h2 id="capabilities-heading" class="section-title">Technical Capabilities</h2>
+        <p class="section-intro">
+          Tools, frameworks, and engineering methodologies verified across active backend systems, automation workflows, and product architectures.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem;" class="grid-md-2">
+
+        <!-- PILLAR 1: Backend & APIs -->
+        <div class="bento-card">
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem;">
+            <div style="width: 2.25rem; height: 2.25rem; border-radius: 0.5rem; background: var(--accent-dim); border: 1px solid var(--accent-border); display: flex; align-items: center; justify-content: center; color: var(--accent);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+            </div>
+            <div>
+              <h3 style="font-size: 1.125rem; font-weight: 700; color: var(--text);">Backend &amp; APIs</h3>
+              <span class="mono text-dim" style="font-size: 0.75rem;">Core server architectures</span>
+            </div>
+          </div>
+
+          <p style="color: var(--text-muted); font-size: 0.9375rem; line-height: 1.65; margin-bottom: 1.25rem;">
+            Designing predictable, secure RESTful application programming interfaces with strict request validation, structured error handling, and robust business logic.
+          </p>
+
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto;">
+            <span class="tag tag-accent">Python</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">Django</span>
+            <span class="tag">REST APIs</span>
+          </div>
+        </div>
+
+        <!-- PILLAR 2: Data & Automation -->
+        <div class="bento-card">
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem;">
+            <div style="width: 2.25rem; height: 2.25rem; border-radius: 0.5rem; background: var(--accent-dim); border: 1px solid var(--accent-border); display: flex; align-items: center; justify-content: center; color: var(--accent);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+            </div>
+            <div>
+              <h3 style="font-size: 1.125rem; font-weight: 700; color: var(--text);">Data &amp; Automation</h3>
+              <span class="mono text-dim" style="font-size: 0.75rem;">Extraction &amp; transformation</span>
+            </div>
+          </div>
+
+          <p style="color: var(--text-muted); font-size: 0.9375rem; line-height: 1.65; margin-bottom: 1.25rem;">
+            Building headless browser workflows, dynamic web extraction pipelines, automated scheduled jobs, and structured data transformation systems.
+          </p>
+
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto;">
+            <span class="tag tag-accent">Web Scraping</span>
+            <span class="tag">Playwright</span>
+            <span class="tag">Scrapy</span>
+            <span class="tag">Selenium</span>
+            <span class="tag">ETL Pipelines</span>
+            <span class="tag">Data Processing</span>
+          </div>
+        </div>
+
+        <!-- PILLAR 3: Databases & Systems -->
+        <div class="bento-card">
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem;">
+            <div style="width: 2.25rem; height: 2.25rem; border-radius: 0.5rem; background: var(--accent-dim); border: 1px solid var(--accent-border); display: flex; align-items: center; justify-content: center; color: var(--accent);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+            </div>
+            <div>
+              <h3 style="font-size: 1.125rem; font-weight: 700; color: var(--text);">Databases &amp; Infrastructure</h3>
+              <span class="mono text-dim" style="font-size: 0.75rem;">Persistence &amp; environment</span>
+            </div>
+          </div>
+
+          <p style="color: var(--text-muted); font-size: 0.9375rem; line-height: 1.65; margin-bottom: 1.25rem;">
+            Implementing relational data models, schema migrations, structured CSV/JSON exports, and standard Linux/Git environment operations.
+          </p>
+
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto;">
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">SQLite</span>
+            <span class="tag">Redis</span>
+            <span class="tag">Linux</span>
+            <span class="tag">Git</span>
+          </div>
+        </div>
+
+        <!-- PILLAR 4: Frontend, Product & SEO -->
+        <div class="bento-card">
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem;">
+            <div style="width: 2.25rem; height: 2.25rem; border-radius: 0.5rem; background: var(--accent-dim); border: 1px solid var(--accent-border); display: flex; align-items: center; justify-content: center; color: var(--accent);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </div>
+            <div>
+              <h3 style="font-size: 1.125rem; font-weight: 700; color: var(--text);">Frontend &amp; Discovery</h3>
+              <span class="mono text-dim" style="font-size: 0.75rem;">Full-stack &amp; search intelligence</span>
+            </div>
+          </div>
+
+          <p style="color: var(--text-muted); font-size: 0.9375rem; line-height: 1.65; margin-bottom: 1.25rem;">
+            Connecting backend logic to responsive web applications while optimizing structured data for traditional search engines and AI answer engines.
+          </p>
+
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto;">
+            <span class="tag">Next.js</span>
+            <span class="tag">React</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Tailwind CSS</span>
+            <span class="tag">Technical SEO</span>
+            <span class="tag">GEO</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 5: ENGINEERING APPROACH
+         ========================================================================== -->
+    <section id="approach" style="padding: 4.5rem 0; scroll-margin-top: 4rem;" aria-labelledby="approach-heading">
+      <div style="margin-bottom: 2.25rem;">
+        <span class="section-num">04 / Operational Principles</span>
+        <h2 id="approach-heading" class="section-title">Engineering Approach</h2>
+        <p class="section-intro">
+          How I approach software design, data reliability, and backend automation to ensure systems remain maintainable in production.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr; gap: 1.25rem;" class="grid-md-3">
+
+        <div class="bento-card">
+          <div class="mono text-accent" style="font-size: 0.8125rem; font-weight: 600; margin-bottom: 0.75rem;">01 / RELIABILITY</div>
+          <h3 style="font-size: 1.125rem; font-weight: 700; color: var(--text); margin-bottom: 0.5rem;">Defensive by Design</h3>
+          <p style="color: var(--text-muted); font-size: 0.875rem; line-height: 1.65;">
+            Automation systems and scrapers fail when websites change. I build defensively with explicit exception handling, structured fallback mechanisms, and robust retry logic.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <div class="mono text-accent" style="font-size: 0.8125rem; font-weight: 600; margin-bottom: 0.75rem;">02 / DATA INTEGRITY</div>
+          <h3 style="font-size: 1.125rem; font-weight: 700; color: var(--text); margin-bottom: 0.5rem;">Strict Validation</h3>
+          <p style="color: var(--text-muted); font-size: 0.875rem; line-height: 1.65;">
+            Extracted data is only as valuable as its precision. Every dataset passes schema validation before reaching databases, spreadsheets, or third-party e-commerce endpoints.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <div class="mono text-accent" style="font-size: 0.8125rem; font-weight: 600; margin-bottom: 0.75rem;">03 / AUTOMATION</div>
+          <h3 style="font-size: 1.125rem; font-weight: 700; color: var(--text); margin-bottom: 0.5rem;">Eliminating Friction</h3>
+          <p style="color: var(--text-muted); font-size: 0.875rem; line-height: 1.65;">
+            Repetitive manual workflows drain engineering and business hours. I turn manual data collection into automated, repeatable background scripts and scheduled tasks.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <div class="mono text-accent" style="font-size: 0.8125rem; font-weight: 600; margin-bottom: 0.75rem;">04 / API DESIGN</div>
+          <h3 style="font-size: 1.125rem; font-weight: 700; color: var(--text); margin-bottom: 0.5rem;">Clean Interfaces</h3>
+          <p style="color: var(--text-muted); font-size: 0.875rem; line-height: 1.65;">
+            Backends must be intuitive for clients and frontend consumers. I write predictable endpoints adhering to standard HTTP semantics, clear status codes, and type-safe payloads.
+          </p>
+        </div>
+
+        <div class="bento-card" style="grid-column: 1 / -1;">
+          <div class="mono text-accent" style="font-size: 0.8125rem; font-weight: 600; margin-bottom: 0.75rem;">05 / MAINTAINABILITY</div>
+          <h3 style="font-size: 1.125rem; font-weight: 700; color: var(--text); margin-bottom: 0.5rem;">Readable, Modular Code</h3>
+          <p style="color: var(--text-muted); font-size: 0.875rem; line-height: 1.65; max-width: 50rem;">
+            Code is read far more often than it is written. I prioritize clear separation of concerns, modular extraction routines, self-documenting naming, and lightweight architectures over unnecessary framework bloat.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <style>
+      @media (min-width: 768px) {
+        .grid-md-3 { grid-template-columns: 1fr 1fr !important; }
+      }
+      @media (min-width: 1024px) {
+        .grid-md-3 { grid-template-columns: 1fr 1fr 1fr 1fr !important; }
+      }
+    </style>
+
+    <!-- ==========================================================================
+         SECTION 6: ABOUT
+         ========================================================================== -->
+    <section id="about" style="padding: 4.5rem 0; scroll-margin-top: 4rem;" aria-labelledby="about-heading">
+      <div class="bento-card" style="padding: 2.25rem;">
+        <span class="section-num">05 / Background</span>
+        <h2 id="about-heading" class="section-title" style="margin-bottom: 1.25rem;">About Elias</h2>
+
+        <div style="display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: start;" class="grid-md-2">
+          <div>
+            <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.7; margin-bottom: 1rem;">
+              I am a Python backend developer and automation engineer focused on turning raw, unstructured web data into reliable products and streamlined business operations.
+            </p>
+            <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.7; margin-bottom: 1rem;">
+              My work spans the lifecycle of data: from dynamic browser extraction and multi-source scraping to schema transformation, database modeling, REST API development, and search visibility.
+            </p>
+            <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.7;">
+              Whether engineering automated catalog integrations for UK e-commerce businesses, extracting structured marketplace inventory on recurring schedules, or architecting multi-role academic platforms, I value pragmatism, reliability, and code clarity.
+            </p>
+          </div>
+
+          <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--line); border-radius: 0.75rem; padding: 1.5rem;">
+            <span class="mono text-dim" style="font-size: 0.75rem; display: block; margin-bottom: 1rem;">PROFESSIONAL SUMMARY</span>
+            
+            <div style="display: flex; flex-direction: column; gap: 0.875rem; font-size: 0.875rem;">
+              <div style="display: flex; justify-content: space-between; padding-bottom: 0.625rem; border-bottom: 1px solid var(--line);">
+                <span style="color: var(--text-muted);">Primary Focus</span>
+                <span class="mono" style="color: var(--text); font-weight: 500;">Python / Backend / Automation</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; padding-bottom: 0.625rem; border-bottom: 1px solid var(--line);">
+                <span style="color: var(--text-muted);">Key Domains</span>
+                <span class="mono" style="color: var(--text); font-weight: 500;">Web Scraping, ETL, APIs, SEO</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; padding-bottom: 0.625rem; border-bottom: 1px solid var(--line);">
+                <span style="color: var(--text-muted);">Engagement</span>
+                <span class="mono text-accent" style="font-weight: 500;">Freelance, Contract &amp; Projects</span>
+              </div>
+              <div style="display: flex; justify-content: space-between;">
+                <span style="color: var(--text-muted);">Availability</span>
+                <span class="mono" style="color: var(--text); font-weight: 500;">Open for new opportunities</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- ==========================================================================
+         SECTION 7: CONTACT
+         ========================================================================== -->
+    <section id="contact" style="padding: 4.5rem 0; scroll-margin-top: 4rem;" aria-labelledby="contact-heading">
+      <div class="bento-card" style="background: linear-gradient(175deg, rgba(24, 28, 36, 0.95), rgba(14, 16, 20, 0.98)); border-color: rgba(163, 230, 53, 0.2); padding: 2.5rem 2rem;">
+        
+        <div style="max-width: 44rem;">
+          <span class="section-num">06 / Let's Connect</span>
+          <h2 id="contact-heading" class="section-title" style="margin-bottom: 1rem;">
+            Have a backend or data challenge?
+          </h2>
+          
+          <p style="color: var(--text-muted); font-size: 1.0625rem; line-height: 1.65; margin-bottom: 2rem;">
+            Whether you need an automated web scraping pipeline, custom REST APIs, e-commerce data integration, or technical consulting on data extraction and SEO/GEO, I am ready to help.
+          </p>
+
+          <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; margin-bottom: 1.75rem;">
+            <!-- Direct Email Link -->
+            <a href="mailto:ahmedelias@qq.com" class="btn btn-primary" id="contact-email-btn" style="padding: 0.8125rem 1.625rem;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+              ahmedelias@qq.com
+            </a>
+
+            <!-- Copy Email Button -->
+            <button id="copy-email-btn" class="btn btn-secondary" aria-label="Copy email address to clipboard" style="padding: 0.8125rem 1.25rem;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span id="copy-btn-text">Copy Email</span>
+            </button>
+
+            <!-- LinkedIn Profile -->
+            <a href="https://linkedin.com/in/elias-ahmed-946875251" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="contact-linkedin-link" aria-label="LinkedIn Profile (opens in new tab)">
+              LinkedIn ↗
+            </a>
+
+            <!-- GitHub Profile -->
+            <a href="https://github.com/elias702" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="contact-github-link" aria-label="GitHub Profile (opens in new tab)">
+              GitHub ↗
+            </a>
+          </div>
+
+          <p class="mono text-dim" style="font-size: 0.8125rem;">
+            Response time: Usually within 24 hours. Available for remote collaboration worldwide.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
   </main>
 
-  <footer class="mx-auto flex max-w-6xl flex-col gap-3 border-t border-white/10 px-4 py-8 text-xs text-zinc-600 sm:flex-row sm:items-center sm:justify-between sm:px-6">
-    <span>© 2026 Elias Ahmed. Built with HTML + Tailwind CSS.</span>
-    <span class="mono">Python / Backend / Automation</span>
+  <!-- ==========================================================================
+       SECTION 8: FOOTER
+       ========================================================================== -->
+  <footer style="position: relative; z-index: 10; border-top: 1px solid var(--line); background: var(--bg-subtle); padding: 2.5rem 1rem;">
+    <div class="container" style="display: flex; flex-direction: column; gap: 1.5rem; justify-content: space-between; align-items: flex-start;">
+      
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; width: 100%; align-items: center; gap: 1rem;">
+        <div>
+          <a href="#" style="text-decoration: none; color: var(--text); font-weight: 700; font-size: 1rem; letter-spacing: -0.02em;">
+            Elias Ahmed<span class="text-accent">.</span>
+          </a>
+          <p class="mono text-dim" style="font-size: 0.8125rem; margin-top: 0.25rem;">
+            Python Backend Developer &amp; Automation Engineer
+          </p>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 1.25rem; font-size: 0.875rem;">
+          <a href="#experience" style="text-decoration: none; color: var(--text-muted); transition: color 0.15s ease;" onmouseover="this.style.color='#f3f4f6'" onmouseout="this.style.color='#9ca3af'">Experience</a>
+          <a href="#products" style="text-decoration: none; color: var(--text-muted); transition: color 0.15s ease;" onmouseover="this.style.color='#f3f4f6'" onmouseout="this.style.color='#9ca3af'">Products</a>
+          <a href="#capabilities" style="text-decoration: none; color: var(--text-muted); transition: color 0.15s ease;" onmouseover="this.style.color='#f3f4f6'" onmouseout="this.style.color='#9ca3af'">Capabilities</a>
+          <a href="#about" style="text-decoration: none; color: var(--text-muted); transition: color 0.15s ease;" onmouseover="this.style.color='#f3f4f6'" onmouseout="this.style.color='#9ca3af'">About</a>
+          <a href="#contact" style="text-decoration: none; color: var(--text-muted); transition: color 0.15s ease;" onmouseover="this.style.color='#f3f4f6'" onmouseout="this.style.color='#9ca3af'">Contact</a>
+          <a href="https://github.com/elias702" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: var(--text-muted);" onmouseover="this.style.color='#f3f4f6'" onmouseout="this.style.color='#9ca3af'">GitHub</a>
+        </div>
+      </div>
+
+      <div style="width: 100%; border-top: 1px solid var(--line); padding-top: 1.25rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.75rem; font-size: 0.8125rem; color: var(--text-dim);">
+        <span>&copy; 2026 Elias Ahmed. All rights reserved.</span>
+        <span class="mono">Hosted statically on GitHub Pages</span>
+      </div>
+
+    </div>
   </footer>
+
+  <!-- Minimal Vanilla JavaScript for Accessible Interactivity (Zero Framework Overhead) -->
+  <script>
+    // 1. Mobile Menu Drawer Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileNavDrawer = document.getElementById('mobile-nav-drawer');
+    const menuIconBars = document.getElementById('menu-icon-bars');
+    const menuIconClose = document.getElementById('menu-icon-close');
+
+    if (mobileMenuBtn && mobileNavDrawer) {
+      mobileMenuBtn.addEventListener('click', () => {
+        const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+        mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+        
+        if (isExpanded) {
+          mobileNavDrawer.style.display = 'none';
+          menuIconBars.style.display = 'block';
+          menuIconClose.style.display = 'none';
+        } else {
+          mobileNavDrawer.style.display = 'flex';
+          menuIconBars.style.display = 'none';
+          menuIconClose.style.display = 'block';
+        }
+      });
+
+      // Close mobile drawer when clicking any link inside it
+      document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileNavDrawer.style.display = 'none';
+          mobileMenuBtn.setAttribute('aria-expanded', 'false');
+          menuIconBars.style.display = 'block';
+          menuIconClose.style.display = 'none';
+        });
+      });
+    }
+
+    // 2. Email Copy to Clipboard with Feedback
+    const copyEmailBtn = document.getElementById('copy-email-btn');
+    const copyBtnText = document.getElementById('copy-btn-text');
+    const emailToCopy = 'ahmedelias@qq.com';
+
+    if (copyEmailBtn && copyBtnText) {
+      copyEmailBtn.addEventListener('click', () => {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(emailToCopy).then(() => {
+            const originalText = copyBtnText.textContent;
+            copyBtnText.textContent = 'Copied!';
+            copyBtnText.style.color = 'var(--accent)';
+            setTimeout(() => {
+              copyBtnText.textContent = originalText;
+              copyBtnText.style.color = 'inherit';
+            }, 2000);
+          }).catch(() => {
+            copyBtnText.textContent = 'ahmedelias@qq.com';
+          });
+        } else {
+          // Fallback for older browsers
+          const tempInput = document.createElement('input');
+          tempInput.value = emailToCopy;
+          document.body.appendChild(tempInput);
+          tempInput.select();
+          document.execCommand('copy');
+          document.body.removeChild(tempInput);
+          copyBtnText.textContent = 'Copied!';
+          setTimeout(() => {
+            copyBtnText.textContent = 'Copy Email';
+          }, 2000);
+        }
+      });
+    }
+  </script>
 </body>
 </html>
