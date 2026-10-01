@@ -59,4 +59,4 @@ Then visit `http://localhost:8000`.
 
 ### Deploy to GitHub Pages
 
-Push `index.html` and `README.md` to the repository's default branch. GitHub Pages serves the root directory out of the box with zero CI or build dependencies.
+Push `index.html`, `robots.txt`, and `sitemap.xml` to the repository's default branch. GitHub Pages serves these root-level files directly with zero CI or build dependencies.
