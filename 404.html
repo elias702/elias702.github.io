@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090a0c">
+  <meta name="color-scheme" content="dark">
+  <meta name="robots" content="noindex, follow">
+
+  <title>Page not found | Elias Ahmed</title>
+  <meta name="description" content="That page does not exist. Return to the portfolio of Elias Ahmed, Python backend developer and automation engineer.">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230e1014'/%3E%3Ctext x='16' y='21' font-size='15' font-family='monospace' font-weight='bold' fill='%23a3e635' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #090a0c;
+      --surface: #13161c;
+      --line: rgba(255, 255, 255, 0.08);
+      --line-hover: rgba(163, 230, 53, 0.35);
+      --text: #f3f4f6;
+      --text-muted: #9ca3af;
+      --accent: #a3e635;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.25rem;
+      background-image:
+        radial-gradient(ellipse 60% 40% at 50% -10%, rgba(163, 230, 53, 0.07), transparent 70%),
+        linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+      background-size: auto, 40px 40px, 40px 40px;
+      background-repeat: no-repeat;
+    }
+
+    ::selection { background: rgba(163, 230, 53, 0.25); color: #ffffff; }
+
+    .card {
+      width: 100%;
+      max-width: 34rem;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 0.875rem;
+      padding: 2.5rem 2rem;
+      text-align: center;
+    }
+
+    .code {
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: clamp(1.75rem, 5vw, 2.25rem);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+    }
+
+    p { color: var(--text-muted); margin-bottom: 2rem; }
+
+    .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.6875rem 1.375rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      line-height: 1.25rem;
+      border-radius: 0.625rem;
+      text-decoration: none;
+      min-height: 44px;
+      transition: background-color 0.18s ease, border-color 0.18s ease;
+    }
+
+    .btn-primary { background-color: var(--accent); color: #050608; border: 1px solid var(--accent); }
+    .btn-primary:hover { background-color: #bef264; border-color: #bef264; }
+
+    .btn-secondary { background-color: rgba(255, 255, 255, 0.04); color: var(--text); border: 1px solid var(--line); }
+    .btn-secondary:hover { background-color: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.2); }
+
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <p class="code">Error 404</p>
+    <h1>This page doesn&rsquo;t exist.</h1>
+    <p>The link may be broken, or the page may have been moved. Everything else is still on the main site.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="/">Back to home</a>
+      <a class="btn btn-secondary" href="mailto:ahmedelias@qq.com">Get in touch</a>
+    </div>
+  </main>
+</body>
+</html>

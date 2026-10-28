@@ -1,41 +1,48 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#090a0c" />
-  <meta name="color-scheme" content="dark" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090a0c">
+  <meta name="color-scheme" content="dark">
 
   <title>Elias Ahmed | Python Backend Developer &amp; Automation Engineer</title>
-  <meta name="description" content="Elias Ahmed is a Python backend developer and automation engineer building systems that turn data into useful products—specializing in APIs, scraping, and ETL." />
-  <meta name="author" content="Elias Ahmed" />
-  <meta name="robots" content="index, follow" />
+  <meta name="description" content="Elias Ahmed is a Python backend developer and automation engineer building systems that turn data into useful products—specializing in APIs, scraping, and ETL.">
+  <meta name="author" content="Elias Ahmed">
+  <meta name="robots" content="index, follow">
 
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://elias702.github.io/" />
+  <link rel="canonical" href="https://elias702.github.io/">
 
   <!-- Open Graph / Facebook / LinkedIn -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://elias702.github.io/" />
-  <meta property="og:title" content="Elias Ahmed | Python Backend Developer &amp; Automation Engineer" />
-  <meta property="og:description" content="I build systems that turn data into useful products. Backend engineering, web scraping, automation, ETL pipelines, and full-stack product development." />
-  <meta property="og:site_name" content="Elias Ahmed" />
-  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://elias702.github.io/">
+  <meta property="og:title" content="Elias Ahmed | Python Backend Developer &amp; Automation Engineer">
+  <meta property="og:description" content="I build systems that turn data into useful products. Backend engineering, web scraping, automation, ETL pipelines, and full-stack product development.">
+  <meta property="og:site_name" content="Elias Ahmed">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://elias702.github.io/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1792">
+  <meta property="og:image:height" content="1024">
+  <meta property="og:image:alt" content="Elias Ahmed — Python Backend Developer and Automation Engineer, elias702.github.io">
 
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Elias Ahmed | Python Backend Developer &amp; Automation Engineer" />
-  <meta name="twitter:description" content="I build systems that turn data into useful products. Backend systems, web scraping, automation, ETL pipelines, and data-driven products." />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Elias Ahmed | Python Backend Developer &amp; Automation Engineer">
+  <meta name="twitter:description" content="I build systems that turn data into useful products. Backend systems, web scraping, automation, ETL pipelines, and data-driven products.">
+  <meta name="twitter:image" content="https://elias702.github.io/og-image.png">
+  <meta name="twitter:image:alt" content="Elias Ahmed — Python Backend Developer and Automation Engineer, elias702.github.io">
 
   <!-- Favicon (SVG data URI for zero external asset dependency) -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230e1014'/%3E%3Ctext x='16' y='21' font-size='15' font-family='monospace' font-weight='bold' fill='%23a3e635' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230e1014'/%3E%3Ctext x='16' y='21' font-size='15' font-family='monospace' font-weight='bold' fill='%23a3e635' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
 
-  <!-- Fonts: Preconnect & asynchronous swap -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <!-- Fonts: preconnect + display=swap (served from the Google Fonts CDN) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Self-Contained High-Performance CSS (Zero CDN overhead, zero layout shift) -->
+  <!-- Self-Contained High-Performance CSS (all layout & component styles live here) -->
   <style>
     /* ==========================================================================
        CSS Variables & Design Tokens (Dark-first, near-black, refined emerald/lime)
@@ -47,20 +54,32 @@
       --surface-elevated: #181c24;
       --surface-hover: #1c212b;
       --line: rgba(255, 255, 255, 0.08);
-      --line-hover: rgba(163, 230, 53, 0.35);
       --line-focus: #a3e635;
-      
+
       --text: #f3f4f6;
       --text-muted: #9ca3af;
       --text-dim: #8a94a3;
-      
+
       --accent: #a3e635;
+      /* literal fallbacks are re-declared as color-mix below; keep both so the palette still resolves without color-mix support */
+      --line-hover: rgba(163, 230, 53, 0.35);
       --accent-dim: rgba(163, 230, 53, 0.12);
       --accent-border: rgba(163, 230, 53, 0.28);
       --accent-glow: rgba(163, 230, 53, 0.15);
+      --accent-hover: #bef264;
+      /* kept faint enough that dim text still clears 4.5:1 where the spotlight pools */
+      --accent-spot: rgba(163, 230, 53, 0.06);
+      --line-hover: color-mix(in oklab, var(--accent) 35%, transparent);
+      --accent-dim: color-mix(in oklab, var(--accent) 12%, transparent);
+      --accent-border: color-mix(in oklab, var(--accent) 28%, transparent);
+      --accent-glow: color-mix(in oklab, var(--accent) 15%, transparent);
+      --accent-hover: color-mix(in oklab, var(--accent) 82%, #ffffff);
+      --accent-spot: color-mix(in oklab, var(--accent) 6%, transparent);
 
       --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
     }
 
     /* Box sizing and core resets */
@@ -84,7 +103,7 @@
       min-height: 100vh;
       overflow-x: clip;
       position: relative;
-      background-image: 
+      background-image:
         radial-gradient(ellipse 60% 40% at 50% -10%, rgba(163, 230, 53, 0.07), transparent 70%),
         radial-gradient(ellipse 40% 30% at 90% 20%, rgba(59, 130, 246, 0.04), transparent 60%);
       background-repeat: no-repeat;
@@ -104,12 +123,44 @@
       mask-image: radial-gradient(ellipse at 50% 30%, black 40%, transparent 80%);
       -webkit-mask-image: radial-gradient(ellipse at 50% 30%, black 40%, transparent 80%);
     }
+    /* Drift runs on the compositor (translate) instead of background-position to avoid repainting the viewport each frame */
+    @keyframes grid-drift {
+      to { translate: 40px 40px; }
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .grid-pattern { animation: grid-drift 60s linear infinite; }
+    }
 
     /* Typography & Utilities */
     .mono { font-family: var(--font-mono); }
     .text-accent { color: var(--accent); }
     .text-muted { color: var(--text-muted); }
     .text-dim { color: var(--text-dim); }
+
+    /* Gradient-clipped accent; falls back to solid --accent where background-clip: text is unsupported */
+    .grad-text {
+      color: var(--accent);
+      background-image: linear-gradient(92deg, var(--accent) 0%, #34d399 52%, var(--accent) 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+    @supports (background-clip: text) or (-webkit-background-clip: text) {
+      .grad-text {
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+    /* Forced-colors mode strips background images, which would leave the clipped text invisible */
+    @media (forced-colors: active) {
+      .grad-text {
+        color: CanvasText;
+        -webkit-text-fill-color: CanvasText;
+        background-image: none;
+      }
+    }
+
+    h1, h2, h3, .section-title, .card-title, .card-title-lg { text-wrap: balance; }
+    p { text-wrap: pretty; }
 
     /* Container constraints */
     .container {
@@ -174,28 +225,267 @@
       transition: border-color 0.2s ease;
     }
 
+    /* Brand / logo link (44px minimum touch target) */
+    .brand-link {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      min-height: 44px;
+    }
+
+    /* Header nav links with hover + keyboard-focus parity */
+    .nav-link {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: color 0.15s ease;
+    }
+    .nav-link:hover,
+    .nav-link:focus-visible { color: var(--text); }
+
+    /* Footer nav links (44px minimum touch target) with hover + focus parity */
+    .footer-link {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      transition: color 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      padding: 0.625rem 0;
+      min-height: 44px;
+    }
+    .footer-link:hover,
+    .footer-link:focus-visible { color: var(--text); }
+
+    .mobile-nav-link {
+      display: block;
+      text-decoration: none;
+      color: var(--text);
+      padding: 0.5rem 0;
+      font-weight: 500;
+      font-size: 0.9375rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .mobile-nav-link:last-child { border-bottom: 0; }
+
     /* Surface Cards & Bento Items */
     .bento-card {
       background: var(--surface);
       border: 1px solid var(--line);
       border-radius: 0.875rem;
       padding: 1.5rem;
-      transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+      transition: translate 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
       display: flex;
       flex-direction: column;
       height: 100%;
       position: relative;
+      isolation: isolate;
+      container-type: inline-size;
     }
     @media (min-width: 768px) {
       .bento-card {
         padding: 1.75rem;
       }
     }
-    .bento-card:hover {
+    .bento-card:hover,
+    .bento-card:has(a:hover, a:focus-visible),
+    .bento-card:has(button:hover, button:focus-visible) {
       border-color: var(--line-hover);
       background: var(--surface-hover);
-      transform: translateY(-2px);
       box-shadow: 0 10px 24px -10px rgba(0, 0, 0, 0.5);
+    }
+    .bento-card:hover {
+      translate: 0 -2px;
+    }
+
+    /* Pointer spotlight; --mx/--my are fed by the pointermove listener */
+    .bento-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      border-radius: inherit;
+      background: radial-gradient(340px circle at var(--mx, 50%) var(--my, 50%), var(--accent-spot), transparent 62%);
+      opacity: 0;
+      transition: opacity 0.35s var(--ease-out);
+      pointer-events: none;
+    }
+    .bento-card:hover::after,
+    .bento-card:focus-within::after {
+      opacity: 1;
+    }
+
+    /* Accent beam traced around the card edge while hovered or focused */
+    @property --ang {
+      syntax: "<angle>";
+      inherits: false;
+      initial-value: 0deg;
+    }
+    @supports ((mask-composite: exclude) or (-webkit-mask-composite: xor)) {
+      .bento-card::before {
+        content: "";
+        position: absolute;
+        inset: -1px;
+        z-index: 2;
+        padding: 1px;
+        border-radius: inherit;
+        background: conic-gradient(from var(--ang), transparent 0%, var(--accent) 12%, transparent 28%);
+        mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+        -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+        mask-composite: exclude;
+        -webkit-mask-composite: xor;
+        opacity: 0;
+        transition: opacity 0.3s var(--ease-out);
+        pointer-events: none;
+      }
+      .bento-card:hover::before,
+      .bento-card:focus-within::before {
+        opacity: 1;
+      }
+    }
+    @keyframes border-sweep {
+      to { --ang: 360deg; }
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .bento-card:hover::before,
+      .bento-card:focus-within::before {
+        animation: border-sweep 2.4s linear infinite;
+      }
+    }
+
+    /* Section scaffolding */
+    .section {
+      padding: 4.5rem 0;
+      scroll-margin-top: 4rem;
+    }
+    .stack {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    .stack-tight {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+    @media (min-width: 768px) {
+      .grid-md-2 { grid-template-columns: 1fr 1fr; }
+      .grid-md-3 { grid-template-columns: 1fr 1fr; }
+    }
+    @media (min-width: 1024px) {
+      .grid-md-3 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+    }
+
+    /* Card internals */
+    .card-head {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .card-head-lg {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+    /* Header stacking responds to the card's own width, not the viewport */
+    @container (max-width: 420px) {
+      .card-head,
+      .card-head-lg {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+    .card-title {
+      font-size: 1.3125rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.015em;
+    }
+    .card-title-lg {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+    /* Credential rows: dates under a title, and certification lists */
+    .cred-dates {
+      display: block;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      margin-top: 0.375rem;
+    }
+    .cred-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .cred-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      flex-wrap: wrap;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--line);
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+    .cred-list li:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+    .card-body {
+      color: var(--text-muted);
+      font-size: 0.9375rem;
+      line-height: 1.65;
+      margin-bottom: 1.25rem;
+    }
+    .card-body-lg {
+      color: var(--text-muted);
+      font-size: 0.9375rem;
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+    }
+    .eyebrow {
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+    .sub-label {
+      font-size: 0.75rem;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .icon-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+    .icon-box {
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 0.5rem;
+      background: var(--accent-dim);
+      border: 1px solid var(--accent-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      flex-shrink: 0;
     }
 
     /* Pill Tag */
@@ -212,11 +502,47 @@
       color: var(--text-muted);
       white-space: nowrap;
     }
+    .tag-sm { font-size: 0.75rem; }
     .tag-accent {
       background: var(--accent-dim);
       border-color: var(--accent-border);
       color: var(--accent);
       font-weight: 600;
+    }
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: auto;
+      padding-top: 1rem;
+      border-top: 1px solid var(--line);
+    }
+    .tag-row-flush {
+      border-top: 0;
+      padding-top: 0;
+    }
+    .tag-cluster {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.375rem;
+    }
+
+    /* Approach cards */
+    .approach-num {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+    .approach-title {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+    .approach-body {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      line-height: 1.65;
     }
 
     /* Buttons */
@@ -241,9 +567,9 @@
       border: 1px solid var(--accent);
     }
     .btn-primary:hover {
-      background-color: #bef264;
-      border-color: #bef264;
-      transform: translateY(-1px);
+      background-color: var(--accent-hover);
+      border-color: var(--accent-hover);
+      translate: 0 -1px;
     }
     .btn-secondary {
       background-color: rgba(255, 255, 255, 0.04);
@@ -253,7 +579,7 @@
     .btn-secondary:hover {
       background-color: rgba(255, 255, 255, 0.08);
       border-color: rgba(255, 255, 255, 0.2);
-      transform: translateY(-1px);
+      translate: 0 -1px;
     }
 
     /* Subtle Section Numbers */
@@ -286,6 +612,191 @@
       max-width: 42rem;
     }
 
+    /* Responsive navigation visibility */
+    @media (max-width: 768px) {
+      #desktop-nav { display: none !important; }
+      #mobile-menu-btn { display: inline-flex !important; align-items: center; justify-content: center; }
+    }
+    @media (min-width: 769px) {
+      #mobile-nav-drawer { display: none !important; }
+    }
+
+    /* ==========================================================================
+       Motion: scroll-driven reveals, progress, counters, ticker
+       All of it is progressive enhancement: without support (or with
+       prefers-reduced-motion) the page renders fully visible and static.
+       ========================================================================== */
+
+    /* Reading-progress bar inside the sticky nav (hidden until supported) */
+    .scroll-progress {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      height: 2px;
+      border-radius: 9999px;
+      background: linear-gradient(90deg, var(--accent), #34d399);
+      scale: 0 1;
+      transform-origin: 0 50%;
+      pointer-events: none;
+    }
+    @keyframes progress-grow {
+      from { scale: 0 1; }
+      to { scale: 1 1; }
+    }
+    @supports (animation-timeline: scroll()) {
+      @media (prefers-reduced-motion: no-preference) {
+        .scroll-progress {
+          animation: progress-grow linear both;
+          animation-timeline: scroll(root);
+        }
+      }
+    }
+
+    /* Entrance reveal for section headers and cards (no JS required) */
+    @keyframes reveal-rise {
+      from { opacity: 0; translate: 0 1.5rem; }
+      to { opacity: 1; translate: 0 0; }
+    }
+    @supports (animation-timeline: view()) {
+      @media (prefers-reduced-motion: no-preference) {
+        .section > :first-child,
+        .bento-card {
+          animation: reveal-rise 1s var(--ease-out) both;
+          animation-timeline: view();
+          animation-range: entry 0% entry 40%;
+        }
+      }
+    }
+
+    /* Count-up impact stats: registered integer property + CSS counters */
+    @property --stat-num {
+      syntax: "<integer>";
+      inherits: false;
+      initial-value: 0;
+    }
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+      margin-top: 2.25rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--line);
+    }
+    @media (min-width: 768px) {
+      .stat-row { grid-template-columns: repeat(4, 1fr); }
+    }
+    .stat-value {
+      font-family: var(--font-mono);
+      font-size: 1.75rem;
+      font-weight: 600;
+      line-height: 1.1;
+      color: var(--accent);
+      font-variant-numeric: tabular-nums;
+      counter-reset: n var(--stat-target);
+    }
+    .stat-value::after { content: counter(n); }
+    .stat-value.suf-k::after { content: counter(n) "K+"; }
+    .stat-value.suf-pct::after { content: counter(n) "%"; }
+    .stat-label {
+      display: block;
+      margin-top: 0.375rem;
+      font-size: 0.6875rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+    }
+    .t-10 { --stat-target: 10; }
+    .t-4 { --stat-target: 4; }
+    .t-3 { --stat-target: 3; }
+    .t-100 { --stat-target: 100; }
+    @keyframes stat-count {
+      from { --stat-num: 0; }
+      to { --stat-num: var(--stat-target); }
+    }
+    @supports (animation-timeline: view()) {
+      @media (prefers-reduced-motion: no-preference) {
+        .stat-value {
+          counter-reset: n var(--stat-num);
+          animation: stat-count 1s linear both;
+          animation-timeline: view();
+          animation-range: entry 0% entry 70%;
+        }
+      }
+    }
+
+    /* Stack ticker: CSS-only marquee, pauses on hover and keyboard focus */
+    .ticker {
+      position: relative;
+      z-index: 5;
+      overflow: hidden;
+      padding: 0.875rem 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: var(--bg-subtle);
+      mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+      -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+    }
+    .ticker-track {
+      display: flex;
+      width: max-content;
+      animation: ticker-scroll 48s linear infinite;
+    }
+    .ticker:hover .ticker-track,
+    .ticker:focus-within .ticker-track { animation-play-state: paused; }
+    .ticker-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 2rem;
+      padding-right: 2rem;
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      color: var(--text-dim);
+      white-space: nowrap;
+    }
+    .ticker-item::after {
+      content: "";
+      width: 0.25rem;
+      height: 0.25rem;
+      border-radius: 50%;
+      background: var(--accent);
+      opacity: 0.55;
+    }
+    @keyframes ticker-scroll {
+      to { translate: -50% 0; }
+    }
+
+    /* Mobile drawer enter/exit transition; degrades to an instant toggle */
+    #mobile-nav-drawer {
+      display: none;
+      opacity: 0;
+      translate: 0 -0.5rem;
+      transition:
+        opacity 0.22s var(--ease-out),
+        translate 0.22s var(--ease-out),
+        display 0.22s allow-discrete;
+    }
+    #mobile-nav-drawer[data-open="true"] {
+      display: flex;
+      opacity: 1;
+      translate: 0 0;
+    }
+    @starting-style {
+      #mobile-nav-drawer[data-open="true"] {
+        opacity: 0;
+        translate: 0 -0.5rem;
+      }
+    }
+
+    /* Deep-link landing cue */
+    @keyframes target-flash {
+      from { color: var(--accent); text-shadow: 0 0 28px var(--accent-glow); }
+      to { color: var(--text); text-shadow: 0 0 0 transparent; }
+    }
+    .section:target .section-title {
+      animation: target-flash 1.6s var(--ease-out) 1;
+    }
+
     /* Motion preferences */
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
@@ -293,8 +804,82 @@
         animation-duration: 0.01ms !important;
         transition-duration: 0.01ms !important;
       }
-      .bento-card:hover { transform: none; }
-      .btn:hover { transform: none; }
+      .bento-card:hover { translate: none; }
+      .btn:hover { translate: none; }
+      .ticker-track,
+      .scroll-progress,
+      .grid-pattern,
+      .bento-card::before,
+      .section:target .section-title { animation: none !important; }
+    }
+
+    /* Paged media: render a clean, ink-friendly CV-style document */
+    @media print {
+      @page { margin: 14mm; }
+      :root {
+        color-scheme: light;
+        --bg: #ffffff;
+        --bg-subtle: #ffffff;
+        --surface: #ffffff;
+        --surface-elevated: #ffffff;
+        --surface-hover: #ffffff;
+        --line: #d4d4d8;
+        --line-focus: #111827;
+        --text: #111827;
+        --text-muted: #3f3f46;
+        --text-dim: #52525b;
+        /* accent-* tokens are color-mix derived, so they follow this automatically */
+        --accent: #3f6212;
+      }
+      html { scroll-behavior: auto; }
+      body { background-image: none !important; }
+      .nav-bar, footer, .skip-link, #mobile-nav-drawer,
+      .grid-pattern, .ticker, .scroll-progress,
+      #copy-email-btn, .btn[href^="#"], .btn[href^="http"], .btn[href$=".html"] { display: none !important; }
+      .bento-card::before, .bento-card::after { display: none !important; }
+      .grad-text {
+        color: var(--accent) !important;
+        -webkit-text-fill-color: currentColor !important;
+        background-image: none !important;
+      }
+      .section > :first-child,
+      .bento-card {
+        animation: none !important;
+        opacity: 1 !important;
+        translate: none !important;
+      }
+      .stat-value {
+        animation: none !important;
+        counter-reset: n var(--stat-target) !important;
+      }
+      .section { padding: 1.5rem 0; }
+      .bento-card {
+        background: #ffffff !important;
+        border-color: var(--line) !important;
+        box-shadow: none !important;
+        break-inside: avoid;
+      }
+      h1, h2, h3, .section-title, .card-title, .card-title-lg { break-after: avoid; }
+      p { orphans: 3; widows: 3; }
+      #hero h1 { font-size: 2.25rem !important; }
+      /* Contact links survive as plain text with their URLs spelled out */
+      #contact .btn[href^="http"] {
+        display: inline-flex !important;
+        background: none !important;
+        border: 0 !important;
+        padding: 0 !important;
+        min-height: 0 !important;
+        color: var(--text) !important;
+        font-size: 0.9375rem;
+      }
+      #contact .btn svg { display: none !important; }
+      #contact a[href^="http"]::after {
+        content: " (" attr(href) ")";
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        color: var(--text-dim);
+        word-break: break-all;
+      }
     }
   </style>
 
@@ -334,8 +919,28 @@
         "@id": "https://elias702.github.io/#person",
         "name": "Elias Ahmed",
         "url": "https://elias702.github.io/",
+        "email": "mailto:ahmedelias@qq.com",
         "jobTitle": "Python Backend Developer & Automation Engineer",
         "description": "I build systems that turn data into useful products.",
+        "hasOccupation": {
+          "@id": "https://elias702.github.io/#occupation"
+        },
+        "memberOf": {
+          "@type": "ProgramMembership",
+          "programName": "Bachelor of Computer Science and Technology (English-medium)",
+          "startDate": "2023-09-01",
+          "endDate": "2027-06-01",
+          "hostingOrganization": {
+            "@type": "CollegeOrUniversity",
+            "name": "Hebei University of Science and Technology",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Shijiazhuang",
+              "addressRegion": "Hebei",
+              "addressCountry": "CN"
+            }
+          }
+        },
         "sameAs": [
           "https://github.com/elias702",
           "https://linkedin.com/in/elias-ahmed-946875251"
@@ -361,6 +966,76 @@
           "Technical SEO",
           "Generative Engine Optimization (GEO)"
         ]
+      },
+      {
+        "@type": "Occupation",
+        "@id": "https://elias702.github.io/#occupation",
+        "name": "Python Backend Developer & Automation Engineer",
+        "description": "Backend engineering, web scraping, browser automation, ETL pipelines, REST API development, and full-stack product development.",
+        "occupationalCategory": "Software Developer, Data Engineer",
+        "skills": [
+          "Python",
+          "FastAPI",
+          "Django",
+          "REST APIs",
+          "Web Scraping",
+          "Playwright",
+          "ETL Pipelines",
+          "PostgreSQL",
+          "Technical SEO"
+        ]
+      },
+      {
+        "@type": "CreativeWork",
+        "@id": "https://elias702.github.io/#work-economedical",
+        "name": "Economedical Ltd. — medical product data extraction & Shopify integration",
+        "description": "End-to-end commercial data workflow extracting catalog data with Python and Playwright, normalized and synced into a Shopify store via an automated API layer, alongside custom storefront development.",
+        "creator": { "@id": "https://elias702.github.io/#person" }
+      },
+      {
+        "@type": "CreativeWork",
+        "@id": "https://elias702.github.io/#work-mobiorbit",
+        "name": "Mobiorbit — product-specification directory contributions",
+        "description": "Ongoing technical contribution covering data acquisition pipelines, structured content operations, and Technical SEO / Generative Engine Optimization for a product-specification directory.",
+        "creator": { "@id": "https://elias702.github.io/#person" }
+      },
+      {
+        "@type": "CreativeWork",
+        "@id": "https://elias702.github.io/#work-ic-trading",
+        "name": "IC Trading Network — weekly electronic-component data extraction",
+        "description": "Automated weekly browser-automation pipeline collecting roughly 10,000 to 15,000 electronic-component marketplace records per run, validated and exported to standardized CSV.",
+        "creator": { "@id": "https://elias702.github.io/#person" }
+      },
+      {
+        "@type": "CreativeWork",
+        "@id": "https://elias702.github.io/#work-wingontravel",
+        "name": "Wingontravel — travel platform data automation",
+        "description": "Travel data automation extracting flight and accommodation listings with Python and Playwright, formatted for ingestion into a client-provided database schema.",
+        "creator": { "@id": "https://elias702.github.io/#person" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://elias702.github.io/#product-sms",
+        "name": "School Management System",
+        "description": "Full-stack academic operations and administrative management platform covering student management, admissions, attendance, fees, exams, routines, and role-based access.",
+        "applicationCategory": "BusinessApplication",
+        "creator": { "@id": "https://elias702.github.io/#person" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://elias702.github.io/#product-seolens",
+        "name": "SeoLens",
+        "description": "Planned AI-powered SEO and GEO intelligence platform for technical SEO diagnostics, schema validation, and structured entity analysis.",
+        "applicationCategory": "DeveloperApplication",
+        "creator": { "@id": "https://elias702.github.io/#person" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://elias702.github.io/#product-riveata",
+        "name": "Riveata",
+        "description": "Planned solar intelligence and solutions platform for evaluating, comparing, and understanding solar energy solutions.",
+        "applicationCategory": "LifestyleApplication",
+        "creator": { "@id": "https://elias702.github.io/#person" }
       }
     ]
   }
@@ -369,34 +1044,36 @@
 
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <div class="fixed inset-0 pointer-events-none grid-pattern" style="position: fixed; inset: 0; pointer-events: none; z-index: 0;"></div>
+  <div class="grid-pattern" style="position: fixed; inset: -80px; pointer-events: none; z-index: 0;" aria-hidden="true"></div>
 
   <!-- STICKY HEADER NAVIGATION -->
   <header style="position: sticky; top: 16px; z-index: 50; padding: 0 1rem; margin-top: 16px;">
     <div class="container" style="max-width: 72rem; margin: 0 auto; padding: 0;">
       <nav class="nav-bar" aria-label="Main Navigation" style="display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1.25rem;">
+        <span class="scroll-progress" aria-hidden="true"></span>
         <!-- Identity / Logo -->
-        <a href="#" style="text-decoration: none; color: var(--text); font-weight: 700; font-size: 1.0625rem; letter-spacing: -0.02em; display: inline-flex; align-items: center; gap: 0.25rem;">
+        <a href="#" class="brand-link" style="font-size: 1.0625rem;">
           Elias Ahmed<span class="text-accent" style="font-size: 1.25rem; line-height: 1;">.</span>
         </a>
 
         <!-- Desktop Navigation Items -->
-        <div class="nav-links" style="display: flex; align-items: center; gap: 1.5rem;" id="desktop-nav">
-          <a href="#experience" style="text-decoration: none; color: var(--text-muted); font-size: 0.875rem; font-weight: 500; transition: color 0.15s ease;" onmouseover="this.style.color='#f3f4f6'" onmouseout="this.style.color='#9ca3af'">Experience</a>
-          <a href="#products" style="text-decoration: none; color: var(--text-muted); font-size: 0.875rem; font-weight: 500; transition: color 0.15s ease;" onmouseover="this.style.color='#f3f4f6'" onmouseout="this.style.color='#9ca3af'">Products</a>
-          <a href="#capabilities" style="text-decoration: none; color: var(--text-muted); font-size: 0.875rem; font-weight: 500; transition: color 0.15s ease;" onmouseover="this.style.color='#f3f4f6'" onmouseout="this.style.color='#9ca3af'">Capabilities</a>
-          <a href="#approach" style="text-decoration: none; color: var(--text-muted); font-size: 0.875rem; font-weight: 500; transition: color 0.15s ease;" onmouseover="this.style.color='#f3f4f6'" onmouseout="this.style.color='#9ca3af'">Approach</a>
-          <a href="#about" style="text-decoration: none; color: var(--text-muted); font-size: 0.875rem; font-weight: 500; transition: color 0.15s ease;" onmouseover="this.style.color='#f3f4f6'" onmouseout="this.style.color='#9ca3af'">About</a>
-          <a href="#contact" style="text-decoration: none; color: var(--text-muted); font-size: 0.875rem; font-weight: 500; transition: color 0.15s ease;" onmouseover="this.style.color='#f3f4f6'" onmouseout="this.style.color='#9ca3af'">Contact</a>
+        <div style="display: flex; align-items: center; gap: 1.5rem;" id="desktop-nav">
+          <a href="#experience" class="nav-link">Experience</a>
+          <a href="#products" class="nav-link">Products</a>
+          <a href="#capabilities" class="nav-link">Capabilities</a>
+          <a href="#approach" class="nav-link">Approach</a>
+          <a href="#education" class="nav-link">Education</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#contact" class="nav-link">Contact</a>
         </div>
 
         <!-- Right Side: Availability / Quick Action & Mobile Toggle -->
         <div style="display: flex; align-items: center; gap: 0.75rem;">
-          <a href="#contact" class="btn btn-primary" style="padding: 0.4375rem 0.875rem; font-size: 0.8125rem; border-radius: 0.5rem; min-height: 38px;">
+          <a href="#contact" class="btn btn-primary" style="padding: 0.4375rem 0.875rem; font-size: 0.8125rem; border-radius: 0.5rem;">
             Let's talk →
           </a>
           <!-- Mobile Menu Button -->
-          <button id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-controls="mobile-nav-drawer" aria-expanded="false" style="display: none; background: transparent; border: 1px solid var(--line); border-radius: 0.5rem; padding: 0.5rem; color: var(--text); cursor: pointer; min-width: 40px; min-height: 40px;">
+          <button type="button" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-controls="mobile-nav-drawer" aria-expanded="false" style="display: none; background: transparent; border: 1px solid var(--line); border-radius: 0.5rem; padding: 0.5rem; color: var(--text); cursor: pointer; min-width: 40px; min-height: 40px;">
             <svg id="menu-icon-bars" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="18" x2="20" y2="18"></line></svg>
             <svg id="menu-icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
           </button>
@@ -404,26 +1081,17 @@
       </nav>
 
       <!-- Mobile Dropdown Navigation Drawer -->
-      <nav id="mobile-nav-drawer" aria-label="Mobile navigation" style="display: none; margin-top: 0.5rem; background: var(--surface); border: 1px solid var(--line); border-radius: 0.875rem; padding: 1rem; flex-direction: column; gap: 0.75rem;">
-        <a href="#experience" class="mobile-nav-link" style="text-decoration: none; color: var(--text); padding: 0.5rem 0; font-weight: 500; font-size: 0.9375rem; border-bottom: 1px solid var(--line);">Experience</a>
-        <a href="#products" class="mobile-nav-link" style="text-decoration: none; color: var(--text); padding: 0.5rem 0; font-weight: 500; font-size: 0.9375rem; border-bottom: 1px solid var(--line);">Selected Products</a>
-        <a href="#capabilities" class="mobile-nav-link" style="text-decoration: none; color: var(--text); padding: 0.5rem 0; font-weight: 500; font-size: 0.9375rem; border-bottom: 1px solid var(--line);">Technical Capabilities</a>
-        <a href="#approach" class="mobile-nav-link" style="text-decoration: none; color: var(--text); padding: 0.5rem 0; font-weight: 500; font-size: 0.9375rem; border-bottom: 1px solid var(--line);">Engineering Approach</a>
-        <a href="#about" class="mobile-nav-link" style="text-decoration: none; color: var(--text); padding: 0.5rem 0; font-weight: 500; font-size: 0.9375rem; border-bottom: 1px solid var(--line);">About</a>
-        <a href="#contact" class="mobile-nav-link" style="text-decoration: none; color: var(--text); padding: 0.5rem 0; font-weight: 500; font-size: 0.9375rem;">Contact</a>
+      <nav id="mobile-nav-drawer" aria-label="Mobile navigation" style="margin-top: 0.5rem; background: var(--surface); border: 1px solid var(--line); border-radius: 0.875rem; padding: 1rem; flex-direction: column; gap: 0.75rem;">
+        <a href="#experience" class="mobile-nav-link">Experience</a>
+        <a href="#products" class="mobile-nav-link">Selected Products</a>
+        <a href="#capabilities" class="mobile-nav-link">Technical Capabilities</a>
+        <a href="#approach" class="mobile-nav-link">Engineering Approach</a>
+        <a href="#education" class="mobile-nav-link">Education &amp; Certifications</a>
+        <a href="#about" class="mobile-nav-link">About</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
       </nav>
     </div>
   </header>
-
-  <style>
-    @media (max-width: 768px) {
-      #desktop-nav { display: none !important; }
-      #mobile-menu-btn { display: inline-flex !important; align-items: center; justify-content: center; }
-    }
-    @media (min-width: 769px) {
-      #mobile-nav-drawer { display: none !important; }
-    }
-  </style>
 
   <!-- MAIN CONTENT CONTAINER -->
   <main id="main-content" class="container" style="position: relative; z-index: 10; padding-top: 3.5rem; padding-bottom: 6rem;">
@@ -433,12 +1101,12 @@
          ========================================================================== -->
     <section id="hero" style="padding: 2rem 0 4.5rem 0;" aria-label="Introduction">
       <div style="display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: center;">
-        
+
         <div style="max-width: 52rem;">
           <!-- Availability Pill -->
           <div style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.3125rem 0.875rem; border-radius: 9999px; background: rgba(255, 255, 255, 0.03); border: 1px solid var(--line); font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 1.5rem;">
             <span style="width: 0.5rem; height: 0.5rem; border-radius: 9999px; background: var(--accent); display: inline-block; box-shadow: 0 0 8px var(--accent);"></span>
-            Available for freelance & contract engineering
+            Available for freelance &amp; contract engineering
           </div>
 
           <!-- Name & Core Title -->
@@ -447,12 +1115,12 @@
           </h1>
 
           <!-- Role & Core Pillars -->
-          <p class="mono text-accent" style="font-size: clamp(1rem, 2.2vw, 1.3125rem); font-weight: 600; line-height: 1.4; margin-bottom: 1.25rem; letter-spacing: -0.015em;">
+          <p class="mono grad-text" style="font-size: clamp(1rem, 2.2vw, 1.3125rem); font-weight: 600; line-height: 1.4; margin-bottom: 1.25rem; letter-spacing: -0.015em;">
             Python Backend Developer &amp; Automation Engineer
           </p>
 
           <!-- Core Message & Value Proposition -->
-          <p style="font-size: clamp(1.125rem, 2.2vw, 1.375rem); color: #e5e7eb; line-height: 1.55; margin-bottom: 1.25rem; font-weight: 500;">
+          <p style="font-size: clamp(1.125rem, 2.2vw, 1.375rem); color: var(--text); line-height: 1.55; margin-bottom: 1.25rem; font-weight: 500;">
             "I build systems that turn data into useful products."
           </p>
 
@@ -486,15 +1154,73 @@
             <span class="tag tag-accent">Full-Stack Product Development</span>
             <span class="tag tag-accent">SEO / GEO</span>
           </div>
+
+          <!-- Impact counters (count up on scroll where supported) -->
+          <div class="stat-row">
+            <div>
+              <span class="stat-value t-10 suf-k"></span>
+              <span class="stat-label">records / weekly extraction run</span>
+            </div>
+            <div>
+              <span class="stat-value t-4"></span>
+              <span class="stat-label">commercial engagements</span>
+            </div>
+            <div>
+              <span class="stat-value t-3"></span>
+              <span class="stat-label">products in portfolio</span>
+            </div>
+            <div>
+              <span class="stat-value t-100 suf-pct"></span>
+              <span class="stat-label">static &middot; zero build step</span>
+            </div>
+          </div>
         </div>
 
       </div>
     </section>
 
+    <!-- Stack ticker: decorative marquee of capabilities already listed on-page -->
+    <div class="ticker">
+      <div class="ticker-track">
+        <span class="ticker-item">Python</span>
+        <span class="ticker-item">FastAPI</span>
+        <span class="ticker-item">Django</span>
+        <span class="ticker-item">REST APIs</span>
+        <span class="ticker-item">Playwright</span>
+        <span class="ticker-item">Scrapy</span>
+        <span class="ticker-item">Selenium</span>
+        <span class="ticker-item">ETL Pipelines</span>
+        <span class="ticker-item">PostgreSQL</span>
+        <span class="ticker-item">SQLite</span>
+        <span class="ticker-item">Redis</span>
+        <span class="ticker-item">Next.js</span>
+        <span class="ticker-item">React</span>
+        <span class="ticker-item">Tailwind CSS</span>
+        <span class="ticker-item">Technical SEO</span>
+        <span class="ticker-item">GEO</span>
+        <span class="ticker-item" aria-hidden="true">Python</span>
+        <span class="ticker-item" aria-hidden="true">FastAPI</span>
+        <span class="ticker-item" aria-hidden="true">Django</span>
+        <span class="ticker-item" aria-hidden="true">REST APIs</span>
+        <span class="ticker-item" aria-hidden="true">Playwright</span>
+        <span class="ticker-item" aria-hidden="true">Scrapy</span>
+        <span class="ticker-item" aria-hidden="true">Selenium</span>
+        <span class="ticker-item" aria-hidden="true">ETL Pipelines</span>
+        <span class="ticker-item" aria-hidden="true">PostgreSQL</span>
+        <span class="ticker-item" aria-hidden="true">SQLite</span>
+        <span class="ticker-item" aria-hidden="true">Redis</span>
+        <span class="ticker-item" aria-hidden="true">Next.js</span>
+        <span class="ticker-item" aria-hidden="true">React</span>
+        <span class="ticker-item" aria-hidden="true">Tailwind CSS</span>
+        <span class="ticker-item" aria-hidden="true">Technical SEO</span>
+        <span class="ticker-item" aria-hidden="true">GEO</span>
+      </div>
+    </div>
+
     <!-- ==========================================================================
          SECTION 2: COMMERCIAL EXPERIENCE
          ========================================================================== -->
-    <section id="experience" style="padding: 4.5rem 0; scroll-margin-top: 4rem;" aria-labelledby="experience-heading">
+    <section id="experience" class="section" aria-labelledby="experience-heading">
       <div style="margin-bottom: 2.25rem;">
         <span class="section-num">01 / Proven Track Record</span>
         <h2 id="experience-heading" class="section-title">Commercial Experience</h2>
@@ -504,32 +1230,34 @@
       </div>
 
       <!-- Grid of Commercial Projects -->
-      <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem;">
+      <div class="stack">
 
         <!-- PROJECT 01: Economedical Ltd. -->
         <article class="bento-card" id="project-economedical" style="background: linear-gradient(175deg, rgba(24, 28, 36, 0.95), rgba(19, 22, 28, 0.95));">
-          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 0.75rem; margin-bottom: 1.25rem;">
+          <div class="card-head-lg">
             <div>
-              <span class="mono text-dim" style="font-size: 0.75rem; letter-spacing: 0.05em; display: block; margin-bottom: 0.25rem;">UK-BASED MEDICAL PRODUCTS BUSINESS</span>
-              <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--text); letter-spacing: -0.02em;">
+              <span class="mono text-dim eyebrow">UK-BASED MEDICAL PRODUCTS BUSINESS</span>
+              <h3 class="card-title-lg">
                 Economedical Ltd.
               </h3>
+              <!-- CRED: replace with the real engagement period, e.g. 2023 – 2024 -->
+              <span class="mono text-dim cred-dates">[Start year] – [End year or Present]</span>
             </div>
-            <span class="tag" style="font-size: 0.75rem;">
+            <span class="tag tag-sm">
               Completed Commercial Project
             </span>
           </div>
 
-          <p style="color: var(--text-muted); font-size: 0.9375rem; line-height: 1.7; margin-bottom: 1.25rem;">
+          <p class="card-body-lg">
             Built an end-to-end commercial data workflow and e-commerce integration for a UK medical products distributor. The pipeline extracts complex catalog data—including product names, descriptions, vendor information, images, packaging and box variations, color options, available quantities, and volume-tiered price differences—from supplier sources using Python and Playwright.
           </p>
 
-          <p style="color: var(--text-muted); font-size: 0.9375rem; line-height: 1.7; margin-bottom: 1.5rem;">
+          <p class="card-body-lg" style="margin-bottom: 1.5rem;">
             The extracted data is cleaned, structured, and normalized before being synced directly into the client's Shopify store via an automated API layer. Alongside the data automation pipeline, developed the Shopify storefront with custom styling and design adjustments tailored to the company's business requirements.
           </p>
 
           <!-- Technical Tags -->
-          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--line);">
+          <div class="tag-row">
             <span class="tag">ETL</span>
             <span class="tag">Web Scraping</span>
             <span class="tag">Python</span>
@@ -541,31 +1269,33 @@
         </article>
 
         <!-- 2-COLUMN GRID FOR MOBIORBIT & IC TRADING -->
-        <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem;" class="grid-md-2">
-          
+        <div class="stack grid-md-2">
+
           <!-- PROJECT 02: Mobiorbit -->
           <article class="bento-card" id="project-mobiorbit">
-            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; margin-bottom: 1rem;">
+            <div class="card-head">
               <div>
-                <span class="mono text-dim" style="font-size: 0.75rem; letter-spacing: 0.05em; display: block; margin-bottom: 0.25rem;">PRODUCT-SPECIFICATION DIRECTORY</span>
-                <h3 style="font-size: 1.3125rem; font-weight: 700; color: var(--text); letter-spacing: -0.015em;">
+                <span class="mono text-dim eyebrow">PRODUCT-SPECIFICATION DIRECTORY</span>
+                <h3 class="card-title">
                   Mobiorbit
                 </h3>
+                <!-- CRED: replace with the real engagement period, e.g. 2024 – Present -->
+                <span class="mono text-dim cred-dates">[Start year] – [End year or Present]</span>
               </div>
-              <span class="tag tag-accent" style="font-size: 0.75rem;">
+              <span class="tag tag-accent tag-sm">
                 ● Ongoing
               </span>
             </div>
 
-            <p style="color: var(--text-muted); font-size: 0.9375rem; line-height: 1.65; margin-bottom: 1.25rem;">
+            <p class="card-body">
               Ongoing technical contribution to a digital product-specification directory, focusing on data acquisition pipelines, structured content operations, and discoverability across traditional search engines and generative AI search systems.
             </p>
 
-            <p style="color: var(--text-muted); font-size: 0.9375rem; line-height: 1.65; margin-bottom: 1.5rem;">
+            <p class="card-body" style="margin-bottom: 1.5rem;">
               Responsibilities center on web scraping, data preparation and upload workflows, structured content creation, and technical optimization—aligning structured product information with best practices for Technical SEO and Generative Engine Optimization (GEO) while maintaining strict operational confidentiality.
             </p>
 
-            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--line);">
+            <div class="tag-row">
               <span class="tag">Data Extraction</span>
               <span class="tag">Content Operations</span>
               <span class="tag">SEO</span>
@@ -576,23 +1306,25 @@
 
           <!-- PROJECT 03: IC交易网 (IC Trading Network) -->
           <article class="bento-card" id="project-ic-trading">
-            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; margin-bottom: 1rem;">
+            <div class="card-head">
               <div>
-                <span class="mono text-dim" style="font-size: 0.75rem; letter-spacing: 0.05em; display: block; margin-bottom: 0.25rem;">IC TRADING NETWORK</span>
-                <h3 style="font-size: 1.3125rem; font-weight: 700; color: var(--text); letter-spacing: -0.015em;">
+                <span class="mono text-dim eyebrow">IC TRADING NETWORK</span>
+                <h3 class="card-title">
                   IC交易网
                 </h3>
+                <!-- CRED: replace with the real engagement period, e.g. 2024 – 2025 -->
+                <span class="mono text-dim cred-dates">[Start year] – [End year or Present]</span>
               </div>
-              <span class="tag" style="font-size: 0.75rem;">
+              <span class="tag tag-sm">
                 Completed • Weekly Automation
               </span>
             </div>
 
-            <p style="color: var(--text-muted); font-size: 0.9375rem; line-height: 1.65; margin-bottom: 1.25rem;">
+            <p class="card-body">
               Engineered an automated data-extraction pipeline for IC交易网 (IC Trading Network) to systematically collect high-volume electronic component marketplace listings on a recurring weekly schedule.
             </p>
 
-            <p style="color: var(--text-muted); font-size: 0.9375rem; line-height: 1.65; margin-bottom: 1.25rem;">
+            <p class="card-body">
               Using Python and Playwright for browser automation, the workflow navigates marketplace search results to extract key component specifications, including part model, available inventory, manufacturer, unit price, validity period, batch information, supplier details, and other available catalog fields. The extracted records are validated, structured, and exported into standardized CSV files for downstream business use.
             </p>
 
@@ -604,7 +1336,7 @@
               <span style="font-size: 0.8125rem; color: var(--text-dim); display: block; margin-top: 0.125rem;">Automates collection and CSV generation depending on available data.</span>
             </div>
 
-            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--line);">
+            <div class="tag-row">
               <span class="tag">Python</span>
               <span class="tag">Playwright</span>
               <span class="tag">Automation</span>
@@ -617,27 +1349,29 @@
 
         <!-- PROJECT 04: Wingontravel -->
         <article class="bento-card" id="project-wingontravel">
-          <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; margin-bottom: 1rem;">
+          <div class="card-head">
             <div>
-              <span class="mono text-dim" style="font-size: 0.75rem; letter-spacing: 0.05em; display: block; margin-bottom: 0.25rem;">TRAVEL PLATFORM AUTOMATION</span>
-              <h3 style="font-size: 1.3125rem; font-weight: 700; color: var(--text); letter-spacing: -0.015em;">
+              <span class="mono text-dim eyebrow">TRAVEL PLATFORM AUTOMATION</span>
+              <h3 class="card-title">
                 Wingontravel
               </h3>
+              <!-- CRED: replace with the real engagement period, e.g. 2023 – 2024 -->
+              <span class="mono text-dim cred-dates">[Start year] – [End year or Present]</span>
             </div>
-            <span class="tag" style="font-size: 0.75rem;">
+            <span class="tag tag-sm">
               Completed System
             </span>
           </div>
 
-          <p style="color: var(--text-muted); font-size: 0.9375rem; line-height: 1.65; margin-bottom: 1.25rem;">
+          <p class="card-body">
             Developed a targeted travel data automation system to extract dynamic flight and accommodation listings from the Wingontravel platform. The automation gathers available listing information, including route and property names, geographical locations, real-time pricing, customer ratings, room types, image assets, and other required travel metadata.
           </p>
 
-          <p style="color: var(--text-muted); font-size: 0.9375rem; line-height: 1.65; margin-bottom: 1.5rem;">
+          <p class="card-body" style="margin-bottom: 1.5rem;">
             Built with Python and Playwright, the workflow automates browser interactions across complex travel listings and formats the extracted data to match a client-provided database structure. The system prepares and aligns the multi-field records specifically for ingestion into that pre-existing schema without requiring client database redesign.
           </p>
 
-          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--line);">
+          <div class="tag-row">
             <span class="tag">Python</span>
             <span class="tag">Playwright</span>
             <span class="tag">Travel Data</span>
@@ -649,17 +1383,10 @@
       </div>
     </section>
 
-    <!-- Style for 2-column responsive layout -->
-    <style>
-      @media (min-width: 768px) {
-        .grid-md-2 { grid-template-columns: 1fr 1fr !important; }
-      }
-    </style>
-
     <!-- ==========================================================================
          SECTION 3: SELECTED PRODUCTS
          ========================================================================== -->
-    <section id="products" style="padding: 4.5rem 0; scroll-margin-top: 4rem;" aria-labelledby="products-heading">
+    <section id="products" class="section" aria-labelledby="products-heading">
       <div style="margin-bottom: 2.25rem;">
         <span class="section-num">02 / Software &amp; Platforms</span>
         <h2 id="products-heading" class="section-title">Selected Products</h2>
@@ -668,28 +1395,28 @@
         </p>
       </div>
 
-      <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem;">
+      <div class="stack">
 
         <!-- PRODUCT 01: School Management System -->
         <article class="bento-card" id="product-sms">
-          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 0.5rem; margin-bottom: 1rem;">
+          <div class="card-head">
             <div>
-              <span class="mono text-dim" style="font-size: 0.75rem; letter-spacing: 0.05em; display: block; margin-bottom: 0.25rem;">ACADEMIC OPERATIONS &amp; GOVERNANCE</span>
-              <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--text); letter-spacing: -0.02em;">
+              <span class="mono text-dim eyebrow">ACADEMIC OPERATIONS &amp; GOVERNANCE</span>
+              <h3 class="card-title-lg">
                 School Management System
               </h3>
             </div>
             <span class="tag tag-accent">In Development</span>
           </div>
 
-          <p style="color: var(--text-muted); font-size: 0.9375rem; line-height: 1.7; margin-bottom: 1.25rem;">
+          <p class="card-body-lg">
             An active full-stack academic operations and administrative management platform in development, engineered with Python and modern web technologies. Designed to unify institutional records, administrative workflows, and operational governance across educational environments.
           </p>
 
           <!-- Known Core Functional Modules -->
           <div style="margin-bottom: 1.5rem;">
-            <span class="mono text-dim" style="font-size: 0.75rem; display: block; margin-bottom: 0.5rem;">PROVEN FUNCTIONAL DOMAINS</span>
-            <div style="display: flex; flex-wrap: wrap; gap: 0.375rem;">
+            <span class="mono text-dim sub-label">PROVEN FUNCTIONAL DOMAINS</span>
+            <div class="tag-cluster">
               <span class="tag">Student Management</span>
               <span class="tag">Admissions</span>
               <span class="tag">Academic Years</span>
@@ -705,7 +1432,7 @@
             </div>
           </div>
 
-          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--line);">
+          <div class="tag-row">
             <span class="tag">Python</span>
             <span class="tag">Database Architecture</span>
             <span class="tag">Role-Based Control</span>
@@ -714,32 +1441,32 @@
         </article>
 
         <!-- 2-COLUMN GRID: SeoLens & Riveata -->
-        <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem;" class="grid-md-2">
-          
+        <div class="stack grid-md-2">
+
           <!-- PRODUCT 02: SeoLens -->
           <article class="bento-card" id="product-seolens">
-            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; margin-bottom: 1rem;">
+            <div class="card-head">
               <div>
-                <span class="mono text-dim" style="font-size: 0.75rem; letter-spacing: 0.05em; display: block; margin-bottom: 0.25rem;">SEARCH &amp; DISCOVERY ENGINE</span>
-                <h3 style="font-size: 1.3125rem; font-weight: 700; color: var(--text); letter-spacing: -0.015em;">
+                <span class="mono text-dim eyebrow">SEARCH &amp; DISCOVERY ENGINE</span>
+                <h3 class="card-title">
                   SeoLens
                 </h3>
                 <p class="mono text-accent" style="font-size: 0.8125rem; font-weight: 500; margin-top: 0.125rem;">
                   AI-Powered SEO &amp; GEO Intelligence Platform
                 </p>
               </div>
-              <span class="tag" style="font-size: 0.75rem;">
+              <span class="tag tag-sm">
                 Planned Concept
               </span>
             </div>
 
-            <p style="color: var(--text-muted); font-size: 0.9375rem; line-height: 1.65; margin-bottom: 1.25rem;">
+            <p class="card-body">
               A planned search intelligence platform designed to help web teams and technical marketers analyze website discoverability across traditional search engines and AI generative engines (GEO). Planned capabilities include technical SEO diagnostics, schema validation, and structured entity analysis.
             </p>
 
             <div style="margin-bottom: 1.25rem;">
-              <span class="mono text-dim" style="font-size: 0.75rem; display: block; margin-bottom: 0.5rem;">CORE CAPABILITIES</span>
-              <div style="display: flex; flex-wrap: wrap; gap: 0.375rem;">
+              <span class="mono text-dim sub-label">CORE CAPABILITIES</span>
+              <div class="tag-cluster">
                 <span class="tag">Technical SEO Analysis</span>
                 <span class="tag">GEO Optimization</span>
                 <span class="tag">Structured Data Validation</span>
@@ -747,7 +1474,7 @@
               </div>
             </div>
 
-            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--line);">
+            <div class="tag-row">
               <span class="tag">Technical SEO</span>
               <span class="tag">GEO</span>
               <span class="tag">Schema.org</span>
@@ -757,28 +1484,28 @@
 
           <!-- PRODUCT 03: Riveata -->
           <article class="bento-card" id="product-riveata">
-            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; margin-bottom: 1rem;">
+            <div class="card-head">
               <div>
-                <span class="mono text-dim" style="font-size: 0.75rem; letter-spacing: 0.05em; display: block; margin-bottom: 0.25rem;">ENERGY &amp; SUSTAINABILITY TECH</span>
-                <h3 style="font-size: 1.3125rem; font-weight: 700; color: var(--text); letter-spacing: -0.015em;">
+                <span class="mono text-dim eyebrow">ENERGY &amp; SUSTAINABILITY TECH</span>
+                <h3 class="card-title">
                   Riveata
                 </h3>
                 <p class="mono text-accent" style="font-size: 0.8125rem; font-weight: 500; margin-top: 0.125rem;">
                   Solar Intelligence &amp; Solutions Platform
                 </p>
               </div>
-              <span class="tag" style="font-size: 0.75rem;">
+              <span class="tag tag-sm">
                 Planned Concept
               </span>
             </div>
 
-            <p style="color: var(--text-muted); font-size: 0.9375rem; line-height: 1.65; margin-bottom: 1.25rem;">
+            <p class="card-body">
               A planned clean-tech discovery platform designed to help homeowners and businesses evaluate, compare, and understand solar energy solutions through curated equipment specifications, calculation tools, and structured informational resources.
             </p>
 
             <div style="margin-bottom: 1.25rem;">
-              <span class="mono text-dim" style="font-size: 0.75rem; display: block; margin-bottom: 0.5rem;">CORE FOCUS AREAS</span>
-              <div style="display: flex; flex-wrap: wrap; gap: 0.375rem;">
+              <span class="mono text-dim sub-label">CORE FOCUS AREAS</span>
+              <div class="tag-cluster">
                 <span class="tag">Solar Intelligence</span>
                 <span class="tag">Comparison Tools</span>
                 <span class="tag">Curated Product Discovery</span>
@@ -786,7 +1513,7 @@
               </div>
             </div>
 
-            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--line);">
+            <div class="tag-row">
               <span class="tag">Full-Stack</span>
               <span class="tag">Product Engineering</span>
               <span class="tag">Solar Intelligence</span>
@@ -802,7 +1529,7 @@
     <!-- ==========================================================================
          SECTION 4: TECHNICAL CAPABILITIES
          ========================================================================== -->
-    <section id="capabilities" style="padding: 4.5rem 0; scroll-margin-top: 4rem;" aria-labelledby="capabilities-heading">
+    <section id="capabilities" class="section" aria-labelledby="capabilities-heading">
       <div style="margin-bottom: 2.25rem;">
         <span class="section-num">03 / Applied Competencies</span>
         <h2 id="capabilities-heading" class="section-title">Technical Capabilities</h2>
@@ -811,13 +1538,13 @@
         </p>
       </div>
 
-      <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem;" class="grid-md-2">
+      <div class="stack grid-md-2">
 
         <!-- PILLAR 1: Backend & APIs -->
         <div class="bento-card">
-          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem;">
-            <div style="width: 2.25rem; height: 2.25rem; border-radius: 0.5rem; background: var(--accent-dim); border: 1px solid var(--accent-border); display: flex; align-items: center; justify-content: center; color: var(--accent);">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+          <div class="icon-row">
+            <div class="icon-box">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
             </div>
             <div>
               <h3 style="font-size: 1.125rem; font-weight: 700; color: var(--text);">Backend &amp; APIs</h3>
@@ -825,11 +1552,11 @@
             </div>
           </div>
 
-          <p style="color: var(--text-muted); font-size: 0.9375rem; line-height: 1.65; margin-bottom: 1.25rem;">
+          <p class="card-body">
             Engineering Python backend services and REST APIs with FastAPI and Django—implementing strict request validation, structured error handling, clean business logic, and reliable third-party API integrations.
           </p>
 
-          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto;">
+          <div class="tag-row tag-row-flush">
             <span class="tag tag-accent">Python</span>
             <span class="tag">FastAPI</span>
             <span class="tag">Django</span>
@@ -839,9 +1566,9 @@
 
         <!-- PILLAR 2: Data & Automation -->
         <div class="bento-card">
-          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem;">
-            <div style="width: 2.25rem; height: 2.25rem; border-radius: 0.5rem; background: var(--accent-dim); border: 1px solid var(--accent-border); display: flex; align-items: center; justify-content: center; color: var(--accent);">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+          <div class="icon-row">
+            <div class="icon-box">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
             </div>
             <div>
               <h3 style="font-size: 1.125rem; font-weight: 700; color: var(--text);">Data &amp; Automation</h3>
@@ -849,11 +1576,11 @@
             </div>
           </div>
 
-          <p style="color: var(--text-muted); font-size: 0.9375rem; line-height: 1.65; margin-bottom: 1.25rem;">
+          <p class="card-body">
             Building headless browser workflows, dynamic web extraction pipelines, automated scheduled jobs, and structured data transformation systems.
           </p>
 
-          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto;">
+          <div class="tag-row tag-row-flush">
             <span class="tag tag-accent">Web Scraping</span>
             <span class="tag">Playwright</span>
             <span class="tag">Scrapy</span>
@@ -865,9 +1592,9 @@
 
         <!-- PILLAR 3: Databases & Systems -->
         <div class="bento-card">
-          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem;">
-            <div style="width: 2.25rem; height: 2.25rem; border-radius: 0.5rem; background: var(--accent-dim); border: 1px solid var(--accent-border); display: flex; align-items: center; justify-content: center; color: var(--accent);">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+          <div class="icon-row">
+            <div class="icon-box">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
             </div>
             <div>
               <h3 style="font-size: 1.125rem; font-weight: 700; color: var(--text);">Databases &amp; Infrastructure</h3>
@@ -875,11 +1602,11 @@
             </div>
           </div>
 
-          <p style="color: var(--text-muted); font-size: 0.9375rem; line-height: 1.65; margin-bottom: 1.25rem;">
+          <p class="card-body">
             Implementing relational data models, schema migrations, structured CSV/JSON exports, and standard Linux/Git environment operations.
           </p>
 
-          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto;">
+          <div class="tag-row tag-row-flush">
             <span class="tag">PostgreSQL</span>
             <span class="tag">SQLite</span>
             <span class="tag">Redis</span>
@@ -890,9 +1617,9 @@
 
         <!-- PILLAR 4: Frontend, Product & SEO -->
         <div class="bento-card">
-          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem;">
-            <div style="width: 2.25rem; height: 2.25rem; border-radius: 0.5rem; background: var(--accent-dim); border: 1px solid var(--accent-border); display: flex; align-items: center; justify-content: center; color: var(--accent);">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          <div class="icon-row">
+            <div class="icon-box">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
             </div>
             <div>
               <h3 style="font-size: 1.125rem; font-weight: 700; color: var(--text);">Frontend &amp; Discovery</h3>
@@ -900,11 +1627,11 @@
             </div>
           </div>
 
-          <p style="color: var(--text-muted); font-size: 0.9375rem; line-height: 1.65; margin-bottom: 1.25rem;">
+          <p class="card-body">
             Connecting backend logic to responsive web applications while optimizing structured data for traditional search engines and AI answer engines.
           </p>
 
-          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto;">
+          <div class="tag-row tag-row-flush">
             <span class="tag">Next.js</span>
             <span class="tag">React</span>
             <span class="tag">TypeScript</span>
@@ -920,7 +1647,7 @@
     <!-- ==========================================================================
          SECTION 5: ENGINEERING APPROACH
          ========================================================================== -->
-    <section id="approach" style="padding: 4.5rem 0; scroll-margin-top: 4rem;" aria-labelledby="approach-heading">
+    <section id="approach" class="section" aria-labelledby="approach-heading">
       <div style="margin-bottom: 2.25rem;">
         <span class="section-num">04 / Operational Principles</span>
         <h2 id="approach-heading" class="section-title">Engineering Approach</h2>
@@ -929,44 +1656,44 @@
         </p>
       </div>
 
-      <div style="display: grid; grid-template-columns: 1fr; gap: 1.25rem;" class="grid-md-3">
+      <div class="stack-tight grid-md-3">
 
         <div class="bento-card">
-          <div class="mono text-accent" style="font-size: 0.8125rem; font-weight: 600; margin-bottom: 0.75rem;">01 / RELIABILITY</div>
-          <h3 style="font-size: 1.125rem; font-weight: 700; color: var(--text); margin-bottom: 0.5rem;">Defensive by Design</h3>
-          <p style="color: var(--text-muted); font-size: 0.875rem; line-height: 1.65;">
+          <div class="mono text-accent approach-num">01 / RELIABILITY</div>
+          <h3 class="approach-title">Defensive by Design</h3>
+          <p class="approach-body">
             Automation systems and web scrapers fail when dynamic sites change. Using Python and Playwright, I build defensive extraction workflows with explicit exception handling, resilient headless browser automation, structured fallbacks, and robust retry logic.
           </p>
         </div>
 
         <div class="bento-card">
-          <div class="mono text-accent" style="font-size: 0.8125rem; font-weight: 600; margin-bottom: 0.75rem;">02 / DATA INTEGRITY</div>
-          <h3 style="font-size: 1.125rem; font-weight: 700; color: var(--text); margin-bottom: 0.5rem;">Strict Validation</h3>
-          <p style="color: var(--text-muted); font-size: 0.875rem; line-height: 1.65;">
+          <div class="mono text-accent approach-num">02 / DATA INTEGRITY</div>
+          <h3 class="approach-title">Strict Validation</h3>
+          <p class="approach-body">
             Extracted data is only as valuable as its precision. Every dataset passes schema validation before reaching databases, spreadsheets, or third-party e-commerce endpoints.
           </p>
         </div>
 
         <div class="bento-card">
-          <div class="mono text-accent" style="font-size: 0.8125rem; font-weight: 600; margin-bottom: 0.75rem;">03 / AUTOMATION</div>
-          <h3 style="font-size: 1.125rem; font-weight: 700; color: var(--text); margin-bottom: 0.5rem;">Eliminating Friction</h3>
-          <p style="color: var(--text-muted); font-size: 0.875rem; line-height: 1.65;">
+          <div class="mono text-accent approach-num">03 / AUTOMATION</div>
+          <h3 class="approach-title">Eliminating Friction</h3>
+          <p class="approach-body">
             Repetitive manual workflows drain engineering and business hours. I turn manual data collection into automated, repeatable background scripts and scheduled tasks.
           </p>
         </div>
 
         <div class="bento-card">
-          <div class="mono text-accent" style="font-size: 0.8125rem; font-weight: 600; margin-bottom: 0.75rem;">04 / API DESIGN</div>
-          <h3 style="font-size: 1.125rem; font-weight: 700; color: var(--text); margin-bottom: 0.5rem;">Clean Interfaces</h3>
-          <p style="color: var(--text-muted); font-size: 0.875rem; line-height: 1.65;">
+          <div class="mono text-accent approach-num">04 / API DESIGN</div>
+          <h3 class="approach-title">Clean Interfaces</h3>
+          <p class="approach-body">
             Backends must be intuitive for clients and frontend consumers. I write predictable endpoints adhering to standard HTTP semantics, clear status codes, and type-safe payloads.
           </p>
         </div>
 
         <div class="bento-card" style="grid-column: 1 / -1;">
-          <div class="mono text-accent" style="font-size: 0.8125rem; font-weight: 600; margin-bottom: 0.75rem;">05 / MAINTAINABILITY</div>
-          <h3 style="font-size: 1.125rem; font-weight: 700; color: var(--text); margin-bottom: 0.5rem;">Readable, Modular Code</h3>
-          <p style="color: var(--text-muted); font-size: 0.875rem; line-height: 1.65; max-width: 50rem;">
+          <div class="mono text-accent approach-num">05 / MAINTAINABILITY</div>
+          <h3 class="approach-title">Readable, Modular Code</h3>
+          <p class="approach-body" style="max-width: 50rem;">
             Code is read far more often than it is written. I prioritize clear separation of concerns, modular extraction routines, self-documenting naming, and lightweight architectures over unnecessary framework bloat.
           </p>
         </div>
@@ -974,24 +1701,61 @@
       </div>
     </section>
 
-    <style>
-      @media (min-width: 768px) {
-        .grid-md-3 { grid-template-columns: 1fr 1fr !important; }
-      }
-      @media (min-width: 1024px) {
-        .grid-md-3 { grid-template-columns: 1fr 1fr 1fr 1fr !important; }
-      }
-    </style>
+    <!-- ==========================================================================
+         SECTION 6: EDUCATION & CERTIFICATIONS
+         ========================================================================== -->
+    <section id="education" class="section" aria-labelledby="education-heading">
+      <div style="margin-bottom: 2.25rem;">
+        <span class="section-num">05 / Academic Record</span>
+        <h2 id="education-heading" class="section-title">Education &amp; Certifications</h2>
+        <p class="section-intro">
+          Formal qualifications and professional credentials backing the applied engineering work above.
+        </p>
+      </div>
+
+      <div class="stack grid-md-2">
+        <article class="bento-card">
+          <div class="card-head">
+            <div>
+              <span class="mono text-dim eyebrow">FORMAL EDUCATION</span>
+              <h3 class="card-title">Bachelor's Degree in Computer Science &amp; Technology</h3>
+              <span class="mono text-dim cred-dates">Hebei University of Science and Technology · 2023 – 2027 (expected)</span>
+            </div>
+          </div>
+          <p class="card-body">
+            Four-year bachelor's program taught and examined entirely in English — the medium of instruction is formally certified by the university's School of International Education. Currently enrolled and on track to graduate in June 2027 while continuing commercial freelance work.
+          </p>
+          <div class="tag-row">
+            <span class="tag">English-medium program</span>
+            <span class="tag">Shijiazhuang, China</span>
+          </div>
+        </article>
+
+        <!-- CRED: replace the bracketed certification rows with real credentials, then delete this comment -->
+        <article class="bento-card">
+          <div class="card-head">
+            <div>
+              <span class="mono text-dim eyebrow">CERTIFICATIONS</span>
+              <h3 class="card-title">Professional Credentials</h3>
+            </div>
+          </div>
+          <ul class="cred-list">
+            <li><span>[Certification name]</span><span class="mono text-dim">[Issuer · Year]</span></li>
+            <li><span>[Certification name]</span><span class="mono text-dim">[Issuer · Year]</span></li>
+          </ul>
+        </article>
+      </div>
+    </section>
 
     <!-- ==========================================================================
-         SECTION 6: ABOUT
+         SECTION 7: ABOUT
          ========================================================================== -->
-    <section id="about" style="padding: 4.5rem 0; scroll-margin-top: 4rem;" aria-labelledby="about-heading">
+    <section id="about" class="section" aria-labelledby="about-heading">
       <div class="bento-card" style="padding: 2.25rem;">
-        <span class="section-num">05 / Background</span>
+        <span class="section-num">06 / Background</span>
         <h2 id="about-heading" class="section-title" style="margin-bottom: 1.25rem;">About Elias</h2>
 
-        <div style="display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: start;" class="grid-md-2">
+        <div class="stack grid-md-2" style="gap: 2rem; align-items: start;">
           <div>
             <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.7; margin-bottom: 1rem;">
               I am a Python backend developer and automation engineer focused on turning raw, unstructured web data into reliable products and streamlined business operations.
@@ -1005,8 +1769,8 @@
           </div>
 
           <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--line); border-radius: 0.75rem; padding: 1.5rem;">
-            <span class="mono text-dim" style="font-size: 0.75rem; display: block; margin-bottom: 1rem;">PROFESSIONAL SUMMARY</span>
-            
+            <span class="mono text-dim sub-label" style="margin-bottom: 1rem;">PROFESSIONAL SUMMARY</span>
+
             <div style="display: flex; flex-direction: column; gap: 0.875rem; font-size: 0.875rem;">
               <div style="display: flex; justify-content: space-between; padding-bottom: 0.625rem; border-bottom: 1px solid var(--line);">
                 <span style="color: var(--text-muted);">Primary Focus</span>
@@ -1031,17 +1795,17 @@
     </section>
 
     <!-- ==========================================================================
-         SECTION 7: CONTACT
+         SECTION 8: CONTACT
          ========================================================================== -->
-    <section id="contact" style="padding: 4.5rem 0; scroll-margin-top: 4rem;" aria-labelledby="contact-heading">
+    <section id="contact" class="section" aria-labelledby="contact-heading">
       <div class="bento-card" style="background: linear-gradient(175deg, rgba(24, 28, 36, 0.95), rgba(14, 16, 20, 0.98)); border-color: rgba(163, 230, 53, 0.2); padding: 2.5rem 2rem;">
-        
+
         <div style="max-width: 44rem;">
-          <span class="section-num">06 / Let's Connect</span>
+          <span class="section-num">07 / Let's Connect</span>
           <h2 id="contact-heading" class="section-title" style="margin-bottom: 1rem;">
             Have a backend or data challenge?
           </h2>
-          
+
           <p style="color: var(--text-muted); font-size: 1.0625rem; line-height: 1.65; margin-bottom: 2rem;">
             Whether you need an automated web scraping pipeline, custom REST APIs, e-commerce data integration, or technical consulting on data extraction and SEO/GEO, I am ready to help.
           </p>
@@ -1054,7 +1818,7 @@
             </a>
 
             <!-- Copy Email Button -->
-            <button id="copy-email-btn" class="btn btn-secondary" aria-label="Copy email address to clipboard" style="padding: 0.8125rem 1.25rem;">
+            <button type="button" id="copy-email-btn" class="btn btn-secondary" aria-label="Copy email address to clipboard" style="padding: 0.8125rem 1.25rem;">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
               <span id="copy-btn-text">Copy Email</span>
             </button>
@@ -1069,6 +1833,11 @@
             <a href="https://github.com/elias702" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="contact-github-link" aria-label="GitHub Profile (opens in new tab)">
               GitHub ↗
             </a>
+
+            <!-- Printable CV / Resume -->
+            <a href="cv.html" class="btn btn-secondary" id="contact-cv-link">
+              CV / Resume
+            </a>
           </div>
 
           <p class="mono text-dim" style="font-size: 0.8125rem;">
@@ -1082,14 +1851,14 @@
   </main>
 
   <!-- ==========================================================================
-       SECTION 8: FOOTER
+       SECTION 9: FOOTER
        ========================================================================== -->
   <footer style="position: relative; z-index: 10; border-top: 1px solid var(--line); background: var(--bg-subtle); padding: 2.5rem 1rem;">
     <div class="container" style="display: flex; flex-direction: column; gap: 1.5rem; justify-content: space-between; align-items: flex-start;">
-      
+
       <div style="display: flex; flex-wrap: wrap; justify-content: space-between; width: 100%; align-items: center; gap: 1rem;">
         <div>
-          <a href="#" style="text-decoration: none; color: var(--text); font-weight: 700; font-size: 1rem; letter-spacing: -0.02em;">
+          <a href="#" class="brand-link" style="font-size: 1rem;">
             Elias Ahmed<span class="text-accent">.</span>
           </a>
           <p class="mono text-dim" style="font-size: 0.8125rem; margin-top: 0.25rem;">
@@ -1098,12 +1867,15 @@
         </div>
 
         <div style="display: flex; flex-wrap: wrap; gap: 1.25rem; font-size: 0.875rem;">
-          <a href="#experience" style="text-decoration: none; color: var(--text-muted); transition: color 0.15s ease;" onmouseover="this.style.color='#f3f4f6'" onmouseout="this.style.color='#9ca3af'">Experience</a>
-          <a href="#products" style="text-decoration: none; color: var(--text-muted); transition: color 0.15s ease;" onmouseover="this.style.color='#f3f4f6'" onmouseout="this.style.color='#9ca3af'">Products</a>
-          <a href="#capabilities" style="text-decoration: none; color: var(--text-muted); transition: color 0.15s ease;" onmouseover="this.style.color='#f3f4f6'" onmouseout="this.style.color='#9ca3af'">Capabilities</a>
-          <a href="#about" style="text-decoration: none; color: var(--text-muted); transition: color 0.15s ease;" onmouseover="this.style.color='#f3f4f6'" onmouseout="this.style.color='#9ca3af'">About</a>
-          <a href="#contact" style="text-decoration: none; color: var(--text-muted); transition: color 0.15s ease;" onmouseover="this.style.color='#f3f4f6'" onmouseout="this.style.color='#9ca3af'">Contact</a>
-          <a href="https://github.com/elias702" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: var(--text-muted);" onmouseover="this.style.color='#f3f4f6'" onmouseout="this.style.color='#9ca3af'">GitHub</a>
+          <a href="#experience" class="footer-link">Experience</a>
+          <a href="#products" class="footer-link">Products</a>
+          <a href="#capabilities" class="footer-link">Capabilities</a>
+          <a href="#approach" class="footer-link">Approach</a>
+          <a href="#education" class="footer-link">Education</a>
+          <a href="#about" class="footer-link">About</a>
+          <a href="#contact" class="footer-link">Contact</a>
+          <a href="cv.html" class="footer-link">CV / Resume</a>
+          <a href="https://github.com/elias702" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
         </div>
       </div>
 
@@ -1117,38 +1889,53 @@
 
   <!-- Minimal Vanilla JavaScript for Accessible Interactivity (Zero Framework Overhead) -->
   <script>
-    // 1. Mobile Menu Drawer Toggle
+    // 1. Mobile Menu Drawer Toggle (with Escape-to-close and focus management)
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileNavDrawer = document.getElementById('mobile-nav-drawer');
     const menuIconBars = document.getElementById('menu-icon-bars');
     const menuIconClose = document.getElementById('menu-icon-close');
 
-    const closeMobileNav = () => {
-      mobileNavDrawer.style.display = 'none';
-      mobileMenuBtn.setAttribute('aria-expanded', 'false');
-      menuIconBars.style.display = 'block';
-      menuIconClose.style.display = 'none';
+    const setDrawerOpen = (open) => {
+      if (open) {
+        mobileNavDrawer.setAttribute('data-open', 'true');
+      } else {
+        mobileNavDrawer.removeAttribute('data-open');
+      }
+      mobileMenuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      menuIconBars.style.display = open ? 'none' : 'block';
+      menuIconClose.style.display = open ? 'block' : 'none';
+    };
+
+    const closeMobileNav = (returnFocus) => {
+      setDrawerOpen(false);
+      if (returnFocus) mobileMenuBtn.focus();
     };
 
     if (mobileMenuBtn && mobileNavDrawer && menuIconBars && menuIconClose) {
+      const firstDrawerLink = mobileNavDrawer.querySelector('a');
+
       mobileMenuBtn.addEventListener('click', () => {
         const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
         if (isExpanded) {
-          closeMobileNav();
+          closeMobileNav(false);
         } else {
-          mobileNavDrawer.style.display = 'flex';
-          mobileMenuBtn.setAttribute('aria-expanded', 'true');
-          menuIconBars.style.display = 'none';
-          menuIconClose.style.display = 'block';
+          setDrawerOpen(true);
+          if (firstDrawerLink) firstDrawerLink.focus();
         }
       });
 
       document.querySelectorAll('.mobile-nav-link').forEach(link => {
-        link.addEventListener('click', closeMobileNav);
+        link.addEventListener('click', () => closeMobileNav(false));
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && mobileMenuBtn.getAttribute('aria-expanded') === 'true') {
+          closeMobileNav(true);
+        }
       });
 
       window.addEventListener('resize', () => {
-        if (window.innerWidth > 768) closeMobileNav();
+        if (window.innerWidth > 768) closeMobileNav(false);
       });
     }
 
@@ -1187,6 +1974,17 @@
             copied
           );
         }
+      });
+    }
+
+    // 3. Pointer spotlight on cards (coarse pointers are skipped so touch never leaves a frozen glow)
+    if (window.matchMedia('(pointer: fine)').matches) {
+      document.querySelectorAll('.bento-card').forEach((card) => {
+        card.addEventListener('pointermove', (event) => {
+          const rect = card.getBoundingClientRect();
+          card.style.setProperty('--mx', `${event.clientX - rect.left}px`);
+          card.style.setProperty('--my', `${event.clientY - rect.top}px`);
+        });
       });
     }
   </script>
