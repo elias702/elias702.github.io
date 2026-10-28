@@ -27,6 +27,7 @@ Personal developer portfolio for Python backend engineering, web scraping, autom
 2. **Mobiorbit** — Ongoing founding-team work on a mobile specs & reviews platform: data acquisition, structured content operations, and SEO/GEO.
 3. **IC交易网 (IC Trading Network)** — Weekly automated data-extraction workflow collecting electronic-component marketplace data (~10,000–15,000 records per weekly run).
 4. **Wingontravel** — Travel platform data automation covering flights, hotels, and custom database integration.
+5. **My Career Pathshala (India)** — University and study-abroad reference data extraction for an overseas-education consultancy.
 
 ---
 
