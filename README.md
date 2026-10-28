@@ -24,7 +24,7 @@ Personal developer portfolio for Python backend engineering, web scraping, autom
 ## Featured Commercial Experience
 
 1. **EconoMed (UK)** — End-to-end medical product data extraction, Shopify API integration, and custom storefront development.
-2. **Mobiorbit** — Ongoing contributions to product-specification directories across data acquisition, structured content operations, and SEO/GEO.
+2. **Mobiorbit** — Ongoing founding-team work on a mobile specs & reviews platform: data acquisition, structured content operations, and SEO/GEO.
 3. **IC交易网 (IC Trading Network)** — Weekly automated data-extraction workflow collecting electronic-component marketplace data (~10,000–15,000 records per weekly run).
 4. **Wingontravel** — Travel platform data automation covering flights, hotels, and custom database integration.
 
