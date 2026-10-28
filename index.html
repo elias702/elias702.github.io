@@ -982,7 +982,13 @@
           "Schema.org / Structured Data",
           "Task Scheduling",
           "Linux",
-          "Git"
+          "Git",
+          "SQLAlchemy",
+          "Alembic Migrations",
+          "Supabase",
+          "Docker",
+          "Authentication & RBAC",
+          "Monorepo Architecture"
         ]
       },
       {
@@ -1008,7 +1014,12 @@
           "Schema.org / Structured Data",
           "Technical SEO",
           "Generative Engine Optimization (GEO)",
-          "Answer Engine Optimization (AEO)"
+          "Answer Engine Optimization (AEO)",
+          "SQLAlchemy",
+          "Alembic",
+          "Supabase",
+          "Docker",
+          "Authentication & RBAC"
         ]
       },
       {
@@ -1055,9 +1066,26 @@
         "@type": "SoftwareApplication",
         "@id": "https://elias702.github.io/#product-sms",
         "name": "School Management System",
-        "description": "Full-stack academic operations and administrative management platform covering student management, admissions, attendance, fees, exams, routines, and role-based access.",
+        "description": "Bilingual, single-tenant institution management platform built on a decoupled API-first architecture: a Python FastAPI backend enforcing business rules over a 54-table PostgreSQL schema on Supabase, with async SQLAlchemy 2.0 models, Alembic migrations, Argon2id and JWT authentication with rotating refresh tokens, dynamic role-based access control, audit logging, and a Next.js 15 / React 19 client fronted by an HttpOnly-cookie BFF.",
         "dateCreated": "2026",
         "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "softwareRequirements": "Python 3, FastAPI, PostgreSQL (Supabase), Node.js, Next.js 15, Docker",
+        "inLanguage": ["en", "bn"],
+        "featureList": [
+          "Student records, admissions, and academic history",
+          "Academic years, classes, sections, and class routines",
+          "Teacher management and section assignments",
+          "Daily attendance with absence threshold warnings",
+          "Examinations, grading systems, and results",
+          "Fee structures, payments, discounts, and refunds",
+          "Staff payroll periods, adjustments, and disbursements",
+          "Argon2id password hashing with JWT access tokens and rotating refresh tokens",
+          "Refresh token replay detection with automatic session revocation",
+          "Dynamic role-based access control and per-action audit logging",
+          "Document storage metadata backed by Supabase Storage",
+          "English and Bengali localization with Bengali numeral formatting"
+        ],
         "creator": { "@id": "https://elias702.github.io/#person" }
       },
       {
@@ -1491,14 +1519,17 @@
           </div>
 
           <p class="card-body-lg">
-            An active full-stack academic operations and administrative management platform in development, engineered with Python and modern web technologies. Designed to unify institutional records, administrative workflows, and operational governance across educational environments.
+            A bilingual, single-tenant institution management platform built for my own school on a decoupled, API-first architecture. A Python FastAPI service owns every business rule, calculation, and permission check behind a 54-table PostgreSQL schema on Supabase, migrated with Alembic and mapped through async SQLAlchemy 2.0 models.
+          </p>
+          <p class="card-body-lg">
+            The Next.js 15 / React 19 client never touches the database: it calls a route-handler BFF that proxies to FastAPI and keeps refresh tokens in HttpOnly cookies. Authentication uses Argon2id hashing, short-lived JWT access tokens, rotating refresh tokens with replay detection that revokes the whole session, dynamic role-based access control, and an audit log for every sensitive action. Shipped as an npm-workspaces monorepo with shared OpenAPI contracts, Docker images, and a pytest suite covering the auth lifecycle end to end.
           </p>
 
           <!-- Known Core Functional Modules -->
           <div style="margin-bottom: 1.5rem;">
-            <span class="mono text-dim sub-label">PROVEN FUNCTIONAL DOMAINS</span>
+            <span class="mono text-dim sub-label">DOMAIN COVERAGE</span>
             <div class="tag-cluster">
-              <span class="tag">Student Management</span>
+              <span class="tag">Student Records</span>
               <span class="tag">Admissions</span>
               <span class="tag">Academic Years</span>
               <span class="tag">Classes &amp; Sections</span>
@@ -1508,16 +1539,34 @@
               <span class="tag">Fees Tracking</span>
               <span class="tag">Payroll</span>
               <span class="tag">Class Routines</span>
-              <span class="tag">Role-Based Access</span>
-              <span class="tag">Reporting</span>
+            </div>
+          </div>
+
+          <div style="margin-bottom: 1.5rem;">
+            <span class="mono text-dim sub-label">ENGINEERING &amp; SECURITY</span>
+            <div class="tag-cluster">
+              <span class="tag">FastAPI</span>
+              <span class="tag">SQLAlchemy 2.0 Async</span>
+              <span class="tag">Alembic Migrations</span>
+              <span class="tag">Pydantic v2</span>
+              <span class="tag">PostgreSQL · Supabase</span>
+              <span class="tag">Argon2id Hashing</span>
+              <span class="tag">JWT &amp; Refresh Rotation</span>
+              <span class="tag">Role-Based Access Control</span>
+              <span class="tag">Audit Logging</span>
+              <span class="tag">Next.js 15 · React 19</span>
+              <span class="tag">Docker Compose</span>
+              <span class="tag">English / Bengali i18n</span>
             </div>
           </div>
 
           <div class="tag-row">
             <span class="tag">Python</span>
-            <span class="tag">Database Architecture</span>
-            <span class="tag">Role-Based Control</span>
-            <span class="tag">Administrative Operations</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">Relational Schema Design</span>
+            <span class="tag">REST API Design</span>
+            <span class="tag">Next.js</span>
+            <span class="tag">Auth &amp; Security Modeling</span>
           </div>
         </article>
 
@@ -1634,7 +1683,7 @@
           </div>
 
           <p class="card-body">
-            Engineering Python backend services and REST APIs with FastAPI and Django—implementing strict request validation, structured error handling, clean business logic, and reliable third-party API integrations.
+            Engineering Python backend services and REST APIs with FastAPI and Django—implementing strict request validation, structured error handling, clean business logic, reliable third-party API integrations, and JWT authentication with Argon2id hashing, refresh-token rotation, and dynamic role-based access control.
           </p>
 
           <div class="tag-row tag-row-flush">
@@ -1642,6 +1691,8 @@
             <span class="tag">FastAPI</span>
             <span class="tag">Django</span>
             <span class="tag">REST APIs</span>
+            <span class="tag">Pydantic</span>
+            <span class="tag">Auth &amp; RBAC</span>
           </div>
         </div>
 
@@ -1685,13 +1736,17 @@
           </div>
 
           <p class="card-body">
-            Implementing relational data models, schema migrations, structured CSV/JSON exports, and standard Linux/Git environment operations.
+            Implementing relational data models with async SQLAlchemy, versioned schema migrations through Alembic, structured CSV/JSON exports, and containerized Linux/Git environments.
           </p>
 
           <div class="tag-row tag-row-flush">
             <span class="tag">PostgreSQL</span>
             <span class="tag">SQLite</span>
             <span class="tag">Redis</span>
+            <span class="tag">SQLAlchemy</span>
+            <span class="tag">Alembic</span>
+            <span class="tag">Supabase</span>
+            <span class="tag">Docker</span>
             <span class="tag">Linux</span>
             <span class="tag">Git</span>
           </div>

@@ -33,7 +33,7 @@ Personal developer portfolio for Python backend engineering, web scraping, autom
 
 ## Selected Products
 
-1. **School Management System** *(in development)* — Full-stack academic and administrative operations platform covering student management, admissions, attendance, fees, exams, and routines.
+1. **School Management System** *(in development)* — Bilingual, single-tenant institution management platform on a decoupled API-first architecture: Python FastAPI backend enforcing business rules over a 54-table PostgreSQL schema (Supabase) with async SQLAlchemy 2.0 models and Alembic migrations; Argon2id + JWT auth with rotating refresh tokens, replay detection, dynamic RBAC, and audit logging; Next.js 15 / React 19 client behind an HttpOnly-cookie BFF; npm-workspaces monorepo with shared OpenAPI contracts, Docker images, and a pytest auth-lifecycle suite.
 2. **SeoLens** *(planned concept)* — AI-powered SEO & GEO intelligence platform for search and AI-engine discoverability.
 3. **Riveata** *(planned concept)* — Solar intelligence and solutions discovery platform.
 
